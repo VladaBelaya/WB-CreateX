@@ -1,0 +1,61 @@
+// Подключение шрифтов
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format('woff2');
+  }
+}
+
+@include font('lato', normal, 900, 'assets/fonts/Lato-Black.woff2');
+@include font('lato', normal, 700, 'assets/fonts/Lato-Bold.woff2');
+@include font('lato', normal, 400, 'assets/fonts/Lato-Regular.woff2');
+
+// Размер шрифтов
+$fs14: 14px;
+$fs16: 16px;
+$fs18: 18px;
+// Основные цвета
+$white: #fff;
+$black: #1E212C;
+$black2: #424551;
+$gray: #787A80;
+$light_gray: #D7DADD;
+$red: #FF3F3A;
+$red_gradient: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+
+//Сброс стилей
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a, img, svg, button {
+  display: inline-block;
+}
+
+label, input {
+  display: block;
+}
+
+button, input {
+  font-family: 'lato', sans-serif;
+  outline: none;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}

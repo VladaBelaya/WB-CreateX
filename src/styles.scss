@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'config';
+
+body {
+  font-family: 'lato', sans-serif;
+  font-size: $fs16;
+  font-weight: 400;
+  color: $black;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+}
