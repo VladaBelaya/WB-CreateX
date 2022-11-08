@@ -46,7 +46,10 @@ label, input {
 }
 
 button, input {
+  border: none;
   font-family: 'lato', sans-serif;
+  color: $black;
+  background: transparent;
   outline: none;
 }
 

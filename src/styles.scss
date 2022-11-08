@@ -8,6 +8,79 @@ body {
 }
 
 .container {
-  max-width: 1230px;
+  max-width: 1245px;
   margin: 0 auto;
+}
+
+// header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  &__logo {
+    margin-right: 60px;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__auth {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// logo
+.logo {
+  width: 130px;
+  height: 22px;
+}
+
+// nav
+.nav {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    font-weight: 700;
+    line-height: 1.6;
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+  &__link {
+    transition: color .2s ease-in-out;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+//button
+.btn {
+  padding: 13px 40px 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  cursor: pointer;
+  &_red {
+    color: $white;
+    background: $red_gradient;
+    border-radius: 4px;
+  }
+  &_auth {
+    display: flex;
+    align-items: center;
+    padding: 13px 53px 13px 36px;
+  }
+  &__auth-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-image: url('assets/img/profile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
