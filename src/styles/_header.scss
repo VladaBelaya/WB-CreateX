@@ -1,0 +1,18 @@
+// header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 92px;
+  &__logo {
+    margin-right: 60px;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__auth {
+    display: flex;
+    align-items: center;
+  }
+}

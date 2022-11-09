@@ -1,0 +1,26 @@
+@import 'config';
+// nav
+.nav {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    font-weight: 700;
+    line-height: 1.6;
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+    &.active {
+      .nav__link {
+        color: $red;
+      }
+    }
+  }
+  &__link {
+    color: $black2;
+    transition: color .2s ease-in-out;
+    &:hover {
+      color: $red;
+    }
+  }
+}

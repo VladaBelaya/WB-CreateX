@@ -1,0 +1,13 @@
+@import 'config';
+.input {
+  &_light {
+    padding: 9px 12px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: $white;
+    opacity: 0.6;
+    &::placeholder {
+      color: $white;
+    }
+  }
+}

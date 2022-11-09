@@ -1,0 +1,11 @@
+@import 'config';
+// subheading
+.subheading {
+  font-size: $fs16;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: uppercase;
+  &_white {
+    color: $white;
+  }
+}

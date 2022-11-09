@@ -1,0 +1,186 @@
+@import '../../styles/variables';
+.contact {
+  margin-bottom: 168px;
+  &__subheading {
+    margin-bottom: 8px;
+  }
+  &__content {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__info {
+    flex: 1 1 auto;
+  }
+
+  &__card {
+    flex: 1 1 auto;
+    max-height: 412px;
+    box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    border-radius: 4px;
+    img {
+      max-height: 412px;
+    }
+  }
+}
+
+// info section
+.info {
+  &__description {
+    font-size: $fs14;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $gray;
+  }
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 48px;
+    }
+  }
+  &__icon {
+    margin-right: 12px;
+  }
+  &__link {
+    font-size: $fs18;
+    line-height: 1.5;
+    transition: color .2s ease-in-out;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+// questions
+.questions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 180px;
+  &__subheading {
+    margin-bottom: 8px;
+  }
+  &__bg {
+    width: 435px;
+    height: 481px;
+    margin-right: 105px;
+    background-image: url('../../assets/img/bg_questions.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+}
+
+// form-questions
+.form-questions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-column-gap: 25px;
+
+  &__input {
+    margin-top: 8px;
+  }
+  &__label {
+    margin-bottom: 24px;
+    &:nth-child(5) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      margin-bottom: 48px;
+    }
+  }
+  &__agreement {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  &__checkbox {
+    flex: 1 1 auto;
+    &+.btn_red {
+      flex: 1 2 auto;
+    }
+  }
+}
+
+// footer
+.footer {
+  background-color: $black;
+  &__up {
+    padding: 80px 0 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    margin-bottom: 24px;
+  }
+  &__description {
+    margin-bottom: 38px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $white;
+    opacity: 0.6;
+  }
+  &__item-up {
+    &:first-child {
+      max-width: 275px;
+    }
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
+    &:last-child {
+      .footer__subheading {
+        margin-bottom: 24px;
+      }
+    }
+
+  }
+  &__list {
+    opacity: 0.6;
+  }
+  &__link {
+    color: $white;
+  }
+  &__link-flex {
+    display: flex;
+    align-items: center;
+  }
+  &__subheading {
+    margin-bottom: 12px;
+  }
+  &__item {
+    line-height: 1.6;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+  &__icon {
+    margin-right: 8px;
+  }
+  &__label {
+    position: relative;
+    margin-bottom: 12px;
+  }
+  &__description-form {
+    color: $white;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  &__down {
+    padding: 18px 0 19px;
+    background-color: #292c37;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__copyright {
+    color: $white;
+    font-size: 12px;
+  }
+  &__copyright-svg {
+    position: relative;
+    top: 2px;
+  }
+}
