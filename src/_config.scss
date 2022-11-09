@@ -21,6 +21,8 @@ $white: #fff;
 $black: #1E212C;
 $black2: #424551;
 $gray: #787A80;
+$gray2: #9A9CA5;
+$gray3: #B3B7BC;
 $light_gray: #D7DADD;
 $red: #FF3F3A;
 $red_gradient: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
@@ -41,8 +43,17 @@ a, img, svg, button {
   display: inline-block;
 }
 
-label, input {
+label, input, textarea {
   display: block;
+}
+textarea {
+  width: 100%;
+  font-family: 'lato', sans-serif;
+  resize: none;
+}
+
+button {
+  width: 100%;
 }
 
 button, input {
