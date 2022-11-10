@@ -19,6 +19,22 @@
 .subscriptions {
   &__social-networks {
     padding: 24px 48px;
+    .subscriptions__link {
+      width: 20px;
+      height: 20px;
+      &_facebook-min {
+        mask: url('./assets/img/facebook_min.svg') no-repeat center;
+      }
+      &_twitter-min {
+        mask: url('./assets/img/twitter_min.svg') no-repeat center;
+      }
+      &_linkedin-min {
+        mask: url('./assets/img/linkedin_min.svg') no-repeat center;
+      }
+      &_google-min {
+        mask: url('./assets/img/google_min.svg') no-repeat center;
+      }
+    }
   }
   &__subheading {
     margin-bottom: 24px;
@@ -44,17 +60,30 @@
     }
   }
   &__link {
-    .subscriptions__svg {
-      path {
-        transition: fill .2s ease-in-out;
-      }
-    }
+    width: 24px;
+    height: 24px;
+    background-color: $gray;
+    transition: background-color .2s ease-in-out;
     &:hover {
-      .subscriptions__svg {
-        path {
-          fill: $red;
-        }
-      }
+      background-color: $red;
+    }
+    &_facebook {
+      mask: url('./assets/img/facebook.svg') no-repeat center;
+    }
+    &_twitter {
+      mask: url('./assets/img/twitter.svg') no-repeat center;
+    }
+    &_youtube {
+      mask: url('./assets/img/youtube.svg') no-repeat center;
+    }
+    &_telegram {
+      mask: url('./assets/img/telegram.svg') no-repeat center;
+    }
+    &_instagram {
+      mask: url('./assets/img/instagram.svg') no-repeat center;
+    }
+    &_linkedin {
+      mask: url('./assets/img/linkedin.svg') no-repeat center;
     }
   }
   &__text {
