@@ -101,7 +101,12 @@
           </div>
         </div>
         <div class="contact__card">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2d372d56402b44a05fd8e970e2a2038bd2bdf3b3b348a93f45b91994ff6bf1ef&amp;source=constructor" width="100%" height="412" frameborder="0"></iframe>
+<!--      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2d372d56402b44a05fd8e970e2a2038bd2bdf3b3b348a93f45b91994ff6bf1ef&amp;source=constructor" width="100%" height="412" frameborder="0"></iframe>-->
+          <div class="container">
+            <ya-map [center]="[55.751952, 37.600739]" [zoom]="12">
+              <ya-placemark [geometry]="[55.751952, 37.600739]"></ya-placemark>
+            </ya-map>
+          </div>
         </div>
       </div>
     </section>
