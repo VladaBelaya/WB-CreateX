@@ -10,6 +10,10 @@ interface MapConfig {
   zoom: number,
   markGeometry: number[]
 }
+interface SocialNetworks {
+  link: string,
+  name: string
+}
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
@@ -28,6 +32,33 @@ export class ContactsComponent implements OnInit {
     zoom: 12,
     markGeometry: [55.751952, 37.600739]
   }
+
+  public socialNetworks: SocialNetworks[] = [
+    {
+      link: 'https://ru-ru.facebook.com',
+      name: 'facebook'
+    },
+    {
+      link: 'https://twitter.com',
+      name: 'twitter'
+    },
+    {
+      link: 'https://www.youtube.com',
+      name: 'youtube'
+    },
+    {
+      link: 'https://web-telegram.ru',
+      name: 'telegram'
+    },
+    {
+      link: 'https://www.instagram.com',
+      name: 'instagram'
+    },
+    {
+      link: 'https://ru.linkedin.com',
+      name: 'linkedin'
+    },
+  ]
 
   ngOnInit() {
   }

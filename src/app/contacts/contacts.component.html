@@ -51,23 +51,8 @@
           <div class="subscriptions">
             <h2 class="subheading subscriptions__subheading">Follow us:</h2>
             <ul class="subscriptions__list">
-              <li class="subscriptions__item">
-                <a href="https://ru-ru.facebook.com" class="subscriptions__link subscriptions__link_facebook"></a>
-              </li>
-              <li class="subscriptions__item">
-                <a href="https://twitter.com" class="subscriptions__link subscriptions__link_twitter"></a>
-              </li>
-              <li class="subscriptions__item">
-                <a href="https://www.youtube.com" class="subscriptions__link subscriptions__link_youtube"></a>
-              </li>
-              <li class="subscriptions__item">
-                <a href="https://web-telegram.ru" class="subscriptions__link subscriptions__link_telegram"></a>
-              </li>
-              <li class="subscriptions__item">
-                <a href="https://www.instagram.com" class="subscriptions__link subscriptions__link_instagram"></a>
-              </li>
-              <li class="subscriptions__item">
-                <a href="https://ru.linkedin.com" class="subscriptions__link subscriptions__link_linkedin"></a>
+              <li *ngFor="let social of socialNetworks | slice: 0: 10" class="subscriptions__item">
+                <a href="{{ social.link }}" class="subscriptions__link subscriptions__link_{{ social.name }}"></a>
               </li>
             </ul>
           </div>
