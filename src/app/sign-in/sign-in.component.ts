@@ -1,16 +1,14 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {SocialNetworkName} from "../social-networks/social-icon/social-icon.component";
 
 @Component({
   selector: 'app-signIn',
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss']
 })
-export class SignInComponent implements OnInit {
+export class SignInComponent {
   public toggleVisible: boolean = true
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input() icons!: SocialNetworkName[]
 
   toggleVisiblePassword($event: any) {
     $event.preventDefault()

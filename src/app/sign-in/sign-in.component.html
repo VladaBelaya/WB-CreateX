@@ -38,19 +38,6 @@
   </form>
   <div class="subscriptions subscriptions__social-networks">
     <div class="subscriptions__text">Or sign in with</div>
-    <ul class="subscriptions__list subscriptions__list_center">
-      <li class="subscriptions__item subscriptions__item_min">
-        <a href="https://ru-ru.facebook.com" class="subscriptions__link subscriptions__link_facebook-min"></a>
-      </li>
-      <li class="subscriptions__item subscriptions__item_min">
-        <a href="https://www.google.com" class="subscriptions__link subscriptions__link_google-min"></a>
-      </li>
-      <li class="subscriptions__item subscriptions__item_min">
-        <a href="https://twitter.com" class="subscriptions__link subscriptions__link_twitter-min"></a>
-      </li>
-      <li class="subscriptions__item subscriptions__item_min">
-        <a href="https://ru.linkedin.com" class="subscriptions__link subscriptions__link_linkedin-min"></a>
-      </li>
-    </ul>
+    <app-socialNetworks [isCenter]="true" [nameSocialNetworks]="icons"></app-socialNetworks>
   </div>
 </div>

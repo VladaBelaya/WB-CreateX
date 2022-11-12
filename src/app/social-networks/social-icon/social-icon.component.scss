@@ -1,0 +1,80 @@
+@import '../../../styles/variables';
+:host {
+  &:not(:last-child) {
+    margin-right: 32px;
+  }
+}
+.subscriptions__social-networks {
+  :host {
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+    .link {
+      width: 20px;
+      height: 20px;
+
+      &:hover {
+        background-color: $red;
+      }
+
+      &.facebook {
+        mask: url('../../../assets/img/facebook_min.svg') no-repeat center;
+      }
+
+      &.twitter {
+        mask: url('../../../assets/img/twitter_min.svg') no-repeat center;
+      }
+
+      &.google {
+        mask: url('../../../assets/img/google_min.svg') no-repeat center;
+      }
+
+      &.linkedin {
+        mask: url('../../../assets/img/linkedin_min.svg') no-repeat center;
+      }
+    }
+  }
+
+  .list_opacity .link {
+    background-color: $white;
+
+    &:hover {
+      background-color: $red;
+    }
+  }
+}
+
+.link {
+  width: 24px;
+  height: 24px;
+  background-color: $gray;
+  transition: background-color .2s ease-in-out;
+
+  &:hover {
+    background-color: $red;
+  }
+
+  &.facebook {
+    mask: url('../../../assets/img/facebook.svg') no-repeat center;
+  }
+
+  &.twitter {
+    mask: url('../../../assets/img/twitter.svg') no-repeat center;
+  }
+
+  &.youtube {
+    mask: url('../../../assets/img/youtube.svg') no-repeat center;
+  }
+
+  &.telegram {
+    mask: url('../../../assets/img/telegram.svg') no-repeat center;
+  }
+
+  &.instagram {
+    mask: url('../../../assets/img/instagram.svg') no-repeat center;
+  }
+
+  &.linkedin {
+    mask: url('../../../assets/img/linkedin.svg') no-repeat center;
+  }
+}

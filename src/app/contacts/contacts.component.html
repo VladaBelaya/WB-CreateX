@@ -1,190 +1,178 @@
-<div class="container">
-  <header class="header">
-    <div class="header__nav">
-      <a href="#" class="logo header__logo">
-        <img src="assets/img/logo.svg" alt="CreateX">
-      </a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#" class="nav__link">About Us</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Courses</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Events</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
-          <li class="nav__item active"><a href="#" class="nav__link">Contacts</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header__auth">
-      <button class="btn btn_red">Get&nbsp;consultation</button>
-      <button class="btn btn_auth"><span class="btn__auth-icon"></span><span>Log in / Register</span></button>
-    </div>
-  </header>
-  <main class="main">
-    <section class="contact">
-      <h2 class="subheading contact__subheading">Contact info</h2>
-      <div class="contact__content">
-        <div class="contact__info">
-          <div class="description contact__description">Get in touch</div>
-          <ul class="info">
-            <li class="info__item">
-              <div class="icon icon_mail info__icon"></div>
-              <div class="info__content">
-                <div class="info__description">Talk to us:</div>
-                <a href="mailto:{{ contactInfo.mail }}" class="info__link">{{ contactInfo.mail }}</a>
-              </div>
-            </li>
-            <li class="info__item">
-              <div class="icon icon_phone info__icon"></div>
-              <div class="info__content">
-                <div class="info__description">Call us:</div>
-                <a href="tel:+74055550128" class="info__link">{{ contactInfo.phone }}</a>
-              </div>
-            </li>
-            <li class="info__item">
-              <div class="icon icon_address info__icon"></div>
-              <div class="info__content">
-                <div class="info__description">Address:</div>
-                <div class="info__link">{{ contactInfo.address }}</div>
-              </div>
-            </li>
-          </ul>
-          <div class="subscriptions">
-            <h2 class="subheading subscriptions__subheading">Follow us:</h2>
-            <ul class="subscriptions__list">
-              <li *ngFor="let social of socialNetworks | slice: 0: 10" class="subscriptions__item">
-                <a href="{{ social.link }}" class="subscriptions__link subscriptions__link_{{ social.name }}"></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="contact__card">
-          <div class="container">
-            <ya-map [center]="mapConfig.centerMap" [zoom]="mapConfig.zoom">
-              <ya-placemark [geometry]="mapConfig.markGeometry"></ya-placemark>
-            </ya-map>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="questions">
-      <div class="questions__bg"></div>
-      <div class="questions__content">
-        <h2 class="subheading questions__subheading">Any questions?</h2>
-        <div class="description">Drop us a line</div>
-        <form class="form-questions" action="" method="post">
-          <div class="form-questions__container">
-            <label for="firstName" class="label form-questions__label">
-              First Name*
-              <input class="input form-questions__input" type="text" name="firstName" id="firstName" placeholder="Your first name">
-            </label>
-            <label for="lastName" class="label form-questions__label">
-              Last  Name*
-              <input class="input form-questions__input" type="text" name="lastName" id="lastName" placeholder="Your last name">
-            </label>
-            <label for="email" class="label form-questions__label">
-              Email*
-              <input class="input form-questions__input" type="email" name="email" id="email" placeholder="Your working email">
-            </label>
-            <label for="phone" class="label form-questions__label">
-              Phone
-              <input class="input form-questions__input" type="text" name="phone" id="phone" placeholder="Your phone number">
-            </label>
-            <label for="phone" class="label form-questions__label">
-              Message*
-              <textarea class="textarea form-questions__input" type="text" name="phone" id="message" placeholder="Your message"></textarea>
-            </label>
-          </div>
-          <div class="form-questions__agreement">
-            <div class="form-questions__checkbox">
-              <input type="checkbox" class="checkbox" id="agreement" name="agreement" value="yes">
-              <label for="agreement">I agree to re ceive communications from Createx Online School</label>
-            </div>
-            <button class="btn btn_red" type="submit">Send message</button>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-</div>
-<footer class="footer">
-  <div class="container">
-    <ul class="footer__up">
-      <li class="footer__item-up">
-        <a href="#" class="logo footer__logo">
-          <img src="assets/img/logo_white.svg" alt="CreateX">
-        </a>
-        <p class="footer__description">
-          Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country.
-        </p>
-        <div class="subscriptions">
-          <ul class="subscriptions__list subscriptions__list_opacity">
-            <li class="subscriptions__item">
-              <a href="https://ru-ru.facebook.com" class="subscriptions__link subscriptions__link_facebook"></a>
-            </li>
-            <li class="subscriptions__item">
-              <a href="https://twitter.com" class="subscriptions__link subscriptions__link_twitter"></a>
-            </li>
-            <li class="subscriptions__item">
-              <a href="https://www.youtube.com" class="subscriptions__link subscriptions__link_youtube"></a>
-            </li>
-            <li class="subscriptions__item">
-              <a href="https://web-telegram.ru" class="subscriptions__link subscriptions__link_telegram"></a>
-            </li>
-            <li class="subscriptions__item">
-              <a href="https://www.instagram.com" class="subscriptions__link subscriptions__link_instagram"></a>
-            </li>
-            <li class="subscriptions__item">
-              <a href="https://ru.linkedin.com" class="subscriptions__link subscriptions__link_linkedin"></a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li class="footer__item-up">
-        <h2 class="subheading footer__subheading">SITE&nbsp;MAP</h2>
-        <ul class="footer__list">
-          <li class="footer__item"><a href="#">About Us</a></li>
-          <li class="footer__item"><a href="#">Courses</a></li>
-          <li class="footer__item"><a href="#">Events</a></li>
-          <li class="footer__item"><a href="#">Blog</a></li>
-          <li class="footer__item"><a href="#">Contacts</a></li>
-        </ul>
-      </li>
-      <li class="footer__item-up">
-        <h2 class="subheading footer__subheading">COURSES</h2>
-        <ul class="footer__list">
-          <li class="footer__item"><a href="#">Marketing</a></li>
-          <li class="footer__item"><a href="#">Management</a></li>
-          <li class="footer__item"><a href="#">HR&nbsp;&&nbsp;Recruting</a></li>
-          <li class="footer__item"><a href="#">Design</a></li>
-          <li class="footer__item"><a href="#">Development</a></li>
-        </ul>
-      </li>
-      <li class="footer__item-up">
-        <h2 class="subheading footer__subheading">CONTACT&nbsp;US</h2>
-        <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link-flex" href="tel:+74055550128"><span class="icon icon_min icon_phone-min footer__icon"></span><span>{{ contactInfo.phone }}</span></a></li>
-          <li class="footer__item"><a class="footer__link-flex" href="mailto:{{ contactInfo.mail }}"><span class="icon icon_min icon_mail-min footer__icon"></span><span>{{ contactInfo.mail }}</span></a></li>
-        </ul>
-      </li>
-      <li class="footer__item-up">
-        <h2 class="subheading footer__subheading">SIGN UP TO OUR NEWSLETTER</h2>
-        <form action="" method="post">
-          <label class="footer__label">
-            <input class="input input_light" type="email" placeholder="Email address">
-            <button type="submit" class="btn btn_send-icon"></button>
-          </label>
-          <p class="footer__description-form">*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.</p>
-        </form>
-      </li>
-    </ul>
-  </div>
-  <div class="footer__down">
-    <div class="container footer__container">
-      <div class="footer__copyright">© All rights reserved. Made with&nbsp;
-        <img class="footer__copyright-img" src="../../assets/img/heart.svg" alt="с любовью">
-        &nbsp;by Createx Studio
-      </div>
-      <button class="btn btn_go-to-top">GO TO TOP</button>
-    </div>
-  </div>
-</footer>
+<!--<div class="container">-->
+<!--  <header class="header">-->
+<!--    <div class="header__nav">-->
+<!--      <a href="#" class="logo header__logo">-->
+<!--        <img src="assets/img/logo.svg" alt="CreateX">-->
+<!--      </a>-->
+<!--      <nav class="nav">-->
+<!--        <ul class="nav__list">-->
+<!--          <li class="nav__item"><a href="#" class="nav__link">About Us</a></li>-->
+<!--          <li class="nav__item"><a href="#" class="nav__link">Courses</a></li>-->
+<!--          <li class="nav__item"><a href="#" class="nav__link">Events</a></li>-->
+<!--          <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>-->
+<!--          <li class="nav__item active"><a href="#" class="nav__link">Contacts</a></li>-->
+<!--        </ul>-->
+<!--      </nav>-->
+<!--    </div>-->
+<!--    <div class="header__auth">-->
+<!--      <button class="btn btn_red">Get&nbsp;consultation</button>-->
+<!--      <button class="btn btn_auth"><span class="btn__auth-icon"></span><span>Log in / Register</span></button>-->
+<!--    </div>-->
+<!--  </header>-->
+<!--  <main class="main">-->
+<!--    <section class="contact">-->
+<!--      <h2 class="subheading contact__subheading">Contact info</h2>-->
+<!--      <div class="contact__content">-->
+<!--        <div class="contact__info">-->
+<!--          <div class="description contact__description">Get in touch</div>-->
+<!--          <ul class="info">-->
+<!--            <li class="info__item">-->
+<!--              <div class="icon icon_mail info__icon"></div>-->
+<!--              <div class="info__content">-->
+<!--                <div class="info__description">Talk to us:</div>-->
+<!--                <a [href]="contactInfo.mail.href" class="info__link">{{ contactInfo.mail.value }}</a>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li class="info__item">-->
+<!--              <div class="icon icon_phone info__icon"></div>-->
+<!--              <div class="info__content">-->
+<!--                <div class="info__description">Call us:</div>-->
+<!--                <a [href]="contactInfo.phone.href" class="info__link">{{ contactInfo.phone.value }}</a>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li class="info__item">-->
+<!--              <div class="icon icon_address info__icon"></div>-->
+<!--              <div class="info__content">-->
+<!--                <div class="info__description">Address:</div>-->
+<!--                <div class="info__link">{{ contactInfo.address }}</div>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--          <div class="subscriptions">-->
+<!--            <h2 class="subheading subscriptions__subheading">Follow us:</h2>-->
+<!--            <app-socialNetworks [nameSocialNetworks]="icons.contacts"></app-socialNetworks>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="contact__card">-->
+<!--          <div class="container">-->
+<!--            <ya-map [center]="mapConfig.centerMap" [zoom]="mapConfig.zoom">-->
+<!--              <ya-placemark [geometry]="mapConfig.markGeometry"></ya-placemark>-->
+<!--            </ya-map>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--    <section class="questions">-->
+<!--      <div class="questions__bg"></div>-->
+<!--      <div class="questions__content">-->
+<!--        <h2 class="subheading questions__subheading">Any questions?</h2>-->
+<!--        <div class="description">Drop us a line</div>-->
+<!--        <form class="form-questions" action="" method="post">-->
+<!--          <div class="form-questions__container">-->
+<!--            <label for="firstName" class="label form-questions__label">-->
+<!--              First Name*-->
+<!--              <input class="input form-questions__input" type="text" name="firstName" id="firstName" placeholder="Your first name">-->
+<!--            </label>-->
+<!--            <label for="lastName" class="label form-questions__label">-->
+<!--              Last  Name*-->
+<!--              <input class="input form-questions__input" type="text" name="lastName" id="lastName" placeholder="Your last name">-->
+<!--            </label>-->
+<!--            <label for="email" class="label form-questions__label">-->
+<!--              Email*-->
+<!--              <input class="input form-questions__input" type="email" name="email" id="email" placeholder="Your working email">-->
+<!--            </label>-->
+<!--            <label for="phone" class="label form-questions__label">-->
+<!--              Phone-->
+<!--              <input class="input form-questions__input" type="text" name="phone" id="phone" placeholder="Your phone number">-->
+<!--            </label>-->
+<!--            <label for="phone" class="label form-questions__label">-->
+<!--              Message*-->
+<!--              <textarea class="textarea form-questions__input" type="text" name="phone" id="message" placeholder="Your message"></textarea>-->
+<!--            </label>-->
+<!--          </div>-->
+<!--          <div class="form-questions__agreement">-->
+<!--            <div class="form-questions__checkbox">-->
+<!--              <input type="checkbox" class="checkbox" id="agreement" name="agreement" value="yes">-->
+<!--              <label for="agreement">I agree to re ceive communications from Createx Online School</label>-->
+<!--            </div>-->
+<!--            <button class="btn btn_red" type="submit">Send message</button>-->
+<!--          </div>-->
+<!--        </form>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--  </main>-->
+<!--</div>-->
+<!--<footer class="footer">-->
+<!--  <div class="container">-->
+<!--    <ul class="footer__up">-->
+<!--      <li class="footer__item-up">-->
+<!--        <a href="#" class="logo footer__logo">-->
+<!--          <img src="assets/img/logo_white.svg" alt="CreateX">-->
+<!--        </a>-->
+<!--        <p class="footer__description">-->
+<!--          Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts.-->
+<!--          We provide relevant approaches to online learning, internships and employment in the largest companies in the country.-->
+<!--        </p>-->
+<!--        <div class="subscriptions">-->
+<!--          <app-socialNetworks [isFooter]="true" [nameSocialNetworks]="icons.contacts"></app-socialNetworks>-->
+<!--        </div>-->
+<!--      </li>-->
+<!--      <li class="footer__item-up">-->
+<!--        <h2 class="subheading footer__subheading">SITE&nbsp;MAP</h2>-->
+<!--        <ul class="footer__list">-->
+<!--          <li class="footer__item"><a href="#">About Us</a></li>-->
+<!--          <li class="footer__item"><a href="#">Courses</a></li>-->
+<!--          <li class="footer__item"><a href="#">Events</a></li>-->
+<!--          <li class="footer__item"><a href="#">Blog</a></li>-->
+<!--          <li class="footer__item"><a href="#">Contacts</a></li>-->
+<!--        </ul>-->
+<!--      </li>-->
+<!--      <li class="footer__item-up">-->
+<!--        <h2 class="subheading footer__subheading">COURSES</h2>-->
+<!--        <ul class="footer__list">-->
+<!--          <li class="footer__item"><a href="#">Marketing</a></li>-->
+<!--          <li class="footer__item"><a href="#">Management</a></li>-->
+<!--          <li class="footer__item"><a href="#">HR&nbsp;&&nbsp;Recruting</a></li>-->
+<!--          <li class="footer__item"><a href="#">Design</a></li>-->
+<!--          <li class="footer__item"><a href="#">Development</a></li>-->
+<!--        </ul>-->
+<!--      </li>-->
+<!--      <li class="footer__item-up">-->
+<!--        <h2 class="subheading footer__subheading">CONTACT&nbsp;US</h2>-->
+<!--        <ul class="footer__list">-->
+<!--          <li class="footer__item">-->
+<!--            <a class="footer__link-flex" [href]="contactInfo.phone.href">-->
+<!--            <span class="icon icon_min icon_phone-min footer__icon"></span><span>{{ contactInfo.phone.value }}</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li class="footer__item">-->
+<!--            <a class="footer__link-flex" [href]="contactInfo.mail.href">-->
+<!--              <span class="icon icon_min icon_mail-min footer__icon"></span><span>{{ contactInfo.mail.value }}</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </li>-->
+<!--      <li class="footer__item-up">-->
+<!--        <h2 class="subheading footer__subheading">SIGN UP TO OUR NEWSLETTER</h2>-->
+<!--        <form action="" method="post">-->
+<!--          <label class="footer__label">-->
+<!--            <input class="input input_light" type="email" placeholder="Email address">-->
+<!--            <button type="submit" class="btn btn_send-icon"></button>-->
+<!--          </label>-->
+<!--          <p class="footer__description-form">*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.</p>-->
+<!--        </form>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--  <div class="footer__down">-->
+<!--    <div class="container footer__container">-->
+<!--      <div class="footer__copyright">© All rights reserved. Made with&nbsp;-->
+<!--        <img class="footer__copyright-img" src="../../assets/img/heart.svg" alt="с любовью">-->
+<!--        &nbsp;by Createx Studio-->
+<!--      </div>-->
+<!--      <button class="btn btn_go-to-top">GO TO TOP</button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</footer>-->
+<app-signIn [icons]="icons.modal"></app-signIn>
+<!--<app-signUp [icons]="icons.modal"></app-signUp>-->

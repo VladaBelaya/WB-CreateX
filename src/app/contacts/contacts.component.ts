@@ -1,8 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import {SocialNetworkName} from "../social-networks/social-icon/social-icon.component";
+
+type ContactMap = {
+  href: string;
+  value: string;
+}
+
+export interface SocialName {
+  contacts: SocialNetworkName[],
+  modal: SocialNetworkName[]
+}
 
 interface ContactInfo {
-  mail: string,
-  phone: string,
+  mail: ContactMap,
+  phone: ContactMap,
   address: string
 }
 interface MapConfig {
@@ -10,10 +21,7 @@ interface MapConfig {
   zoom: number,
   markGeometry: number[]
 }
-interface SocialNetworks {
-  link: string,
-  name: string
-}
+
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
@@ -22,8 +30,14 @@ interface SocialNetworks {
 
 export class ContactsComponent implements OnInit {
   public readonly contactInfo: ContactInfo = {
-    mail: 'hello@createx.com',
-    phone: '(405) 555-0128',
+    mail: {
+      href: 'mailto:hello@createx.com',
+      value: 'hello@createx.com'
+    },
+    phone: {
+      href: 'tel:+74055550128',
+      value: '(405) 555-0128'
+    },
     address: '2464 Royal Ln. Mesa, New Jersey 45463, USA'
   }
 
@@ -32,33 +46,10 @@ export class ContactsComponent implements OnInit {
     zoom: 12,
     markGeometry: [55.751952, 37.600739]
   }
-
-  public socialNetworks: SocialNetworks[] = [
-    {
-      link: 'https://ru-ru.facebook.com',
-      name: 'facebook'
-    },
-    {
-      link: 'https://twitter.com',
-      name: 'twitter'
-    },
-    {
-      link: 'https://www.youtube.com',
-      name: 'youtube'
-    },
-    {
-      link: 'https://web-telegram.ru',
-      name: 'telegram'
-    },
-    {
-      link: 'https://www.instagram.com',
-      name: 'instagram'
-    },
-    {
-      link: 'https://ru.linkedin.com',
-      name: 'linkedin'
-    },
-  ]
+  public readonly icons: SocialName = {
+    contacts: ['Facebook', 'Twitter', 'Youtube', 'Telegram', 'Instagram', 'Linkedin'],
+    modal: ['Facebook', 'Google', 'Twitter', 'Linkedin']
+  }
 
   ngOnInit() {
   }
