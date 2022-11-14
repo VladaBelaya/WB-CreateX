@@ -13,7 +13,7 @@ enum NetworksLinks {
 export type SocialNetworkName = keyof typeof NetworksLinks;
 
 @Component({
-  selector: 'app-socialIcon',
+  selector: 'app-social-icon',
   templateUrl: './social-icon.component.html',
   styleUrls: ['./social-icon.component.scss']
 })

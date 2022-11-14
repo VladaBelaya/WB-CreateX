@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {SocialNetworkName} from "../social-networks/social-icon/social-icon.component";
 
 @Component({
-  selector: 'app-signIn',
+  selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss']
 })

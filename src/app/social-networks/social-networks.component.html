@@ -1,4 +1,7 @@
-<ul class="list" [class.list_opacity]="isFooter" [class.list_center]="isCenter">
-  <app-socialIcon [name]="social" *ngFor="let social of nameSocialNetworks | slice: 0: 10"></app-socialIcon>
+<ul class="list" [ngClass]="{
+  list_opacity: isFooter,
+  list_center: isCenter
+}">
+  <app-social-icon [name]="social" *ngFor="let social of nameSocialNetworks | slice: 0: 10"></app-social-icon>
 </ul>
 
