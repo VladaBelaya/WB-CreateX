@@ -1,5 +1,4 @@
 @import 'styles/config';
-@import 'styles/header';
 @import 'styles/logo';
 @import 'styles/nav';
 @import 'styles/btn';
@@ -13,6 +12,12 @@
 //ya-map
 .ymaps-2-1-79-map {
   width: 100% !important;
+}
+
+//dialog overlay
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+  background: #1E212C;
+  opacity: .75;
 }
 
 // subscriptions
@@ -35,12 +40,14 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 2;
   transform: translate(-50%, -50%);
   max-width: 486px;
   border: 1px solid #E5E8ED;
   box-shadow: 0 60px 80px -20px rgba(30, 33, 44, 0.16), 0px 26px 24px -10px rgba(30, 33, 44, 0.1), 0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
   border-radius: 4px;
   font-size: 14px;
+  background-color: $white;
   &__label {
     margin-bottom: 20px;
   }
@@ -82,3 +89,25 @@
 .password-container {
   position: relative;
 }
+
+.link{
+  .mat-icon {
+    svg {
+      path {
+        fill: $gray;
+        transition: fill .2s ease-in-out;
+      }
+    }
+  }
+  &:hover {
+    .mat-icon {
+      svg {
+        path {
+          fill: $red;
+        }
+      }
+    }
+  }
+}
+
+

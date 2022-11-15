@@ -20,8 +20,9 @@ export type SocialNetworkName = keyof typeof NetworksLinks;
 export class SocialIconComponent {
   @Input() name!: SocialNetworkName
   @Input() isCenter?: boolean = false
+
+
   public getLink(name: SocialNetworkName): string {
     return NetworksLinks[name]
   }
-
 }

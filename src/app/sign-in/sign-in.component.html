@@ -1,5 +1,5 @@
 <div class="modal">
-  <button class="btn btn_close"></button>
+  <button mat-dialog-close="" class="btn btn_close"></button>
   <div class="modal-subheading">Sign in</div>
   <p class="modal-description">Sign in to your account using email and password provided during registration.</p>
   <form class="modal__form" action="" method="post">
@@ -29,6 +29,6 @@
   </form>
   <div class="subscriptions subscriptions__social-networks">
     <div class="subscriptions__text">Or sign in with</div>
-    <app-social-networks [isCenter]="true" [nameSocialNetworks]="icons"></app-social-networks>
+    <app-social-networks [isCenter]="true" [name]="'modal'"></app-social-networks>
   </div>
 </div>

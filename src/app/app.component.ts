@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public toggleVisible: boolean = true
 
+
   toggleType(toggleVisible: boolean) {
     toggleVisible = !this.toggleVisible
   }

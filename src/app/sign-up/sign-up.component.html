@@ -1,5 +1,5 @@
-<div class="modal">
-  <button class="btn btn_close"></button>
+<div  class="modal">
+  <button mat-dialog-close="" class="btn btn_close"></button>
   <div class="modal-subheading">Sign up</div>
   <p class="modal-description">Registration takes less than a minute but gives you full control over your studying.</p>
   <form class="modal__form" action="" method="post">
@@ -35,12 +35,9 @@
       <a href="#" class="link-red">Sign in</a>
     </div>
   </form>
-<!-- ul subscriptions__list_center -->
-<!-- li subscriptions__item_min -->
-<!-- a subscriptions__link_facebook-min -->
   <div class="subscriptions subscriptions__social-networks">
     <div class="subscriptions__text">Or sign in with</div>
-    <app-social-networks [isCenter]="true" [nameSocialNetworks]="icons"></app-social-networks>
+    <app-social-networks [isCenter]="true" [name]="'modal'"></app-social-networks>
   </div>
 </div>
 

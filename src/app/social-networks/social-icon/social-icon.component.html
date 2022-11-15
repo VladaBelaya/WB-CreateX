@@ -1,3 +1,5 @@
 <li class="item">
-  <a [href]="getLink(name)" class="link" [ngClass]="name | lowercase"></a>
+  <a [href]="getLink(name)" class="link">
+    <mat-icon aria-hidden="false" [svgIcon]="name | lowercase"></mat-icon>
+  </a>
 </li>
