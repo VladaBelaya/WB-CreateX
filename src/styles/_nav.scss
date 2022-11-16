@@ -10,16 +10,14 @@
     &:not(:last-child) {
       margin-right: 40px;
     }
-    &.active {
-      .nav__link {
-        color: $red;
-      }
-    }
   }
   &__link {
     color: $black2;
     transition: color .2s ease-in-out;
     &:hover {
+      color: $red;
+    }
+    &.active {
       color: $red;
     }
   }

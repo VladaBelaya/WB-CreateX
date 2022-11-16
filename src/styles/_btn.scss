@@ -63,4 +63,15 @@
     margin-right: 8px;
     background: url('../assets/img/profile.svg') center no-repeat;
   }
+
+  &_search {
+    position: absolute;
+    top: 49%;
+    right: 16px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    background: url('../assets/img/search.svg') no-repeat center;
+  }
 }

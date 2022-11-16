@@ -1,0 +1,11 @@
+.error {
+  min-height: calc(100vh - 561px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  position: relative;
+  top: -120px;
+}
