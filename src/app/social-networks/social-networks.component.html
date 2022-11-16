@@ -1,6 +1,7 @@
 <ul class="list" [ngClass]="{
   list_opacity: isFooter,
-  list_center: isCenter
+  list_center: isCenter,
+  list_blog: isBlog
 }">
   <app-social-icon [name]="social" *ngFor="let social of icons | slice: 0: 10"></app-social-icon>
 </ul>

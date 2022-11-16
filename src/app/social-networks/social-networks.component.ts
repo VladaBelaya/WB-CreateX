@@ -53,11 +53,12 @@ export class SocialNetworksComponent {
   public collectionIcon: CollectionIcons = {
     default: ['Facebook', 'Twitter', 'Youtube', 'Telegram', 'Instagram', 'Linkedin'],
     modal: ['Facebook', 'Google', 'Twitter', 'Linkedin'],
-    blog: ['Facebook', 'Twitter', 'Linkedin'],
+    blog: ['Facebook', 'Twitter', 'Linkedin']
   }
   @Input() name: string = 'default'
   @Input() isFooter?: boolean = false
   @Input() isCenter?: boolean = false
+  @Input() isBlog?: boolean = false
 
   color = 'red'
 

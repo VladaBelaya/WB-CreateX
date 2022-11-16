@@ -18,6 +18,10 @@ import {MatButtonModule} from "@angular/material/button";
 import { HttpClientModule } from "@angular/common/http";
 import {MatDialogModule} from "@angular/material/dialog";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { SinglePostComponent } from './single-post/single-post.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { SinglePostContentComponent } from './single-post-content/single-post-content.component';
+import { SinglePostAsideComponent } from './single-post-aside/single-post-aside.component';
 
 const mapConfig: YaConfig = {
   apikey: environment.API_YA,
@@ -34,7 +38,11 @@ const mapConfig: YaConfig = {
     SocialIconComponent,
     NavbarComponent,
     FooterComponent,
-    LayoutComponent
+    LayoutComponent,
+    SinglePostComponent,
+    NotFoundComponent,
+    SinglePostContentComponent,
+    SinglePostAsideComponent
   ],
   imports: [
     BrowserModule,
