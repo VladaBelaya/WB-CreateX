@@ -10,19 +10,19 @@ export class CardTrendComponent {
     {
       title: 'What is traffic arbitrage and does it really make money?',
       date: 'August 4, 2022',
-      src: '/assets/img/trend1.jpg',
+      src: 'assets/img/trend1.jpg',
       link: ''
     },
     {
       title: 'What is traffic arbitrage and does it really make money?',
       date: 'August 5, 2022',
-      src: '/assets/img/trend2.jpg',
+      src: 'assets/img/trend2.jpg',
       link: '',
     },
     {
       title: 'What is traffic arbitrage and does it really make money?',
       date: 'June 3, 2022',
-      src: '/assets/img/trend3.jpg',
+      src: 'assets/img/trend3.jpg',
       link: ''
     }
   ]
