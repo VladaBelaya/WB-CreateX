@@ -10,31 +10,31 @@ interface NameIcons {
 const ICONS: NameIcons[] = [
   {
     name: 'facebook',
-    path: '/assets/img/facebook.svg',
+    path: 'assets/img/facebook.svg',
   },
   {
     name: 'twitter',
-    path: '/assets/img/twitter.svg',
+    path: 'assets/img/twitter.svg',
   },
   {
     name: 'youtube',
-    path: '/assets/img/youtube.svg',
+    path: 'assets/img/youtube.svg',
   },
   {
     name: 'telegram',
-    path: '/assets/img/telegram.svg',
+    path: 'assets/img/telegram.svg',
   },
   {
     name: 'instagram',
-    path: '/assets/img/instagram.svg',
+    path: 'assets/img/instagram.svg',
   },
   {
     name: 'linkedin',
-    path: '/assets/img/linkedin.svg',
+    path: 'assets/img/linkedin.svg',
   },
   {
     name: 'google',
-    path: '/assets/img/google_min.svg',
+    path: 'assets/img/google_min.svg',
   },
 ];
 
