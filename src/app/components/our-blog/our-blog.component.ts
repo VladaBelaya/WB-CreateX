@@ -15,7 +15,7 @@ export class OurBlogComponent {
       description: 'Aliquam vulputate hendrerit quam sollicitudin urna enim viverra gravida. Consectetur urna arcu eleifend. Consectetur urna arcu eleifend.',
       readTime: '4 min',
       date: 'August 4, 2022',
-      src: '/assets/img/our-blog-1.png',
+      src: 'assets/img/our-blog-1.png',
       link: ''
     },
     {
@@ -25,7 +25,7 @@ export class OurBlogComponent {
       description: 'Aliquam vulputate hendrerit quam sollicitudin urna enim viverra gravida. Consectetur urna arcu eleifend. Consectetur urna arcu eleifend.',
       readTime: '14 min',
       date: 'August 4, 2022',
-      src: '/assets/img/our-blog-2.png',
+      src: 'assets/img/our-blog-2.png',
       link: ''
     },
     {
@@ -35,7 +35,7 @@ export class OurBlogComponent {
       description: 'Aliquam vulputate hendrerit quam sollicitudin urna enim viverra gravida. Consectetur urna arcu eleifend. Consectetur urna arcu eleifend.',
       readTime: '4 min',
       date: 'August 1, 2022',
-      src: '/assets/img/our-blog-3.png',
+      src: 'assets/img/our-blog-3.png',
       link: ''
     },
   ]
