@@ -26,17 +26,12 @@ export class ContactsComponent implements OnInit {
     zoom: 12,
     markGeometry: [55.751952, 37.600739]
   }
-  public readonly icons: SocialName = {
-    contacts: ['Facebook', 'Twitter', 'Youtube', 'Telegram', 'Instagram', 'Linkedin'],
-    modal: ['Facebook', 'Google', 'Twitter', 'Linkedin']
-  }
-
-
 
   constructor(private contactInfoService: ContactInfoService) {
     this.contactInfo = contactInfoService.contactInfo
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
 }

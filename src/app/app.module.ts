@@ -27,10 +27,13 @@ import { DistributionComponent } from './components/distribution/distribution.co
 import { SearchComponent } from './components/search/search.component';
 import { CardAuthorComponent } from './components/card-author/card-author.component';
 import { CardTrendComponent } from './components/card-trend/card-trend.component';
-import { TagComponent } from './components/tag/tag.component';
+import { TagComponent } from './tags/tag/tag.component';
 import { DateComponent } from './components/date/date.component';
 import { OurBlogComponent } from './components/our-blog/our-blog.component';
-import { BlogCardComponent } from './components/blog-card/blog-card.component';
+import { BlogCardComponent } from './components/blog-cards/blog-card/blog-card.component';
+import { GrayscaleDirective } from './directives/grayscale.directive';
+import { BlogCardsComponent } from './components/blog-cards/blog-cards.component';
+import { TagsComponent } from './tags/tags.component';
 
 const mapConfig: YaConfig = {
   apikey: environment.API_YA,
@@ -59,7 +62,10 @@ const mapConfig: YaConfig = {
     TagComponent,
     DateComponent,
     OurBlogComponent,
-    BlogCardComponent
+    BlogCardComponent,
+    GrayscaleDirective,
+    BlogCardsComponent,
+    TagsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {SignUpComponent} from "../sign-up/sign-up.component";
 
@@ -9,7 +9,8 @@ import {SignUpComponent} from "../sign-up/sign-up.component";
 })
 export class NavbarComponent {
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) {
+  }
 
   openDialog() {
     this.dialog.open(SignUpComponent, {

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {SocialNetworkName} from "../social-networks/social-icon/social-icon.component";
 
 @Component({
@@ -6,13 +6,7 @@ import {SocialNetworkName} from "../social-networks/social-icon/social-icon.comp
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent implements OnInit {
-
+export class LayoutComponent {
   @Input() icons!: SocialNetworkName[]
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

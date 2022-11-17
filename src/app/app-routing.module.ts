@@ -7,17 +7,17 @@ import {SinglePostComponent} from "./components/single-post/single-post.componen
 export enum MainRoutes {
   Default = '',
   Contacts = 'contacts',
-  Single_post = 'single-post'
+  Single_post = 'single-post',
+  Not_found = 'not-found'
 
 }
 
 const routes: Routes = [
-  {path: MainRoutes.Default, component: SinglePostComponent},
   {path: MainRoutes.Contacts, component: ContactsComponent},
   {path: MainRoutes.Single_post, component: SinglePostComponent},
-  {path: 'not-found1', component: NotFoundComponent},
-  {path: 'not-found2', component: NotFoundComponent},
-  {path: 'not-found3', component: NotFoundComponent},
+  {path: MainRoutes.Not_found, component: NotFoundComponent},
+  {path: MainRoutes.Default, pathMatch: 'full', redirectTo: MainRoutes.Single_post},
+  {path: '**', redirectTo: MainRoutes.Not_found}
 ];
 
 @NgModule({
