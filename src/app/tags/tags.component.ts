@@ -10,8 +10,7 @@ export type Tag = { title: string; link: string }
 export class TagsComponent {
   @Input() public tags: Tag[] = [
     {title: 'learning', link: 'learning'},
-    {title: 'HR', link: 'HR'},
-    {title: 'self-development', link: 'self-development'},
+    {title: 'HR', link: 'HR'}
   ]
 
 }

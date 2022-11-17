@@ -3,7 +3,7 @@ import {Directive, ElementRef, HostListener} from '@angular/core';
 @Directive({
   selector: '[appGrayscale]'
 })
-export class GrayscaleDirective {
+export class ColorfulDirective {
   constructor(private readonly el: ElementRef) {
     this.initStyles();
   }

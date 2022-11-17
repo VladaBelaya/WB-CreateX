@@ -31,7 +31,7 @@ import { TagComponent } from './tags/tag/tag.component';
 import { DateComponent } from './components/date/date.component';
 import { OurBlogComponent } from './components/our-blog/our-blog.component';
 import { BlogCardComponent } from './components/blog-cards/blog-card/blog-card.component';
-import { GrayscaleDirective } from './directives/grayscale.directive';
+import { ColorfulDirective } from './directives/colorful.directive';
 import { BlogCardsComponent } from './components/blog-cards/blog-cards.component';
 import { TagsComponent } from './tags/tags.component';
 
@@ -63,7 +63,7 @@ const mapConfig: YaConfig = {
     DateComponent,
     OurBlogComponent,
     BlogCardComponent,
-    GrayscaleDirective,
+    ColorfulDirective,
     BlogCardsComponent,
     TagsComponent
   ],
