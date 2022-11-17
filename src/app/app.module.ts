@@ -17,6 +17,7 @@ import {MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from "@angular/material/button";
 import { HttpClientModule } from "@angular/common/http";
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatCardModule} from '@angular/material/card';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { SinglePostComponent } from './components/single-post/single-post.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -28,6 +29,8 @@ import { CardAuthorComponent } from './components/card-author/card-author.compon
 import { CardTrendComponent } from './components/card-trend/card-trend.component';
 import { TagComponent } from './components/tag/tag.component';
 import { DateComponent } from './components/date/date.component';
+import { OurBlogComponent } from './components/our-blog/our-blog.component';
+import { BlogCardComponent } from './components/blog-card/blog-card.component';
 
 const mapConfig: YaConfig = {
   apikey: environment.API_YA,
@@ -54,7 +57,9 @@ const mapConfig: YaConfig = {
     CardAuthorComponent,
     CardTrendComponent,
     TagComponent,
-    DateComponent
+    DateComponent,
+    OurBlogComponent,
+    BlogCardComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +69,8 @@ const mapConfig: YaConfig = {
     AngularYandexMapsModule.forRoot(mapConfig),
     HttpClientModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

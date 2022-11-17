@@ -24,10 +24,7 @@
     top: 50%;
     transform: translateY(-50%);
     right: 12px;
-    background-image: url('../assets/img/arrow.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    background: url('../assets/img/arrow.svg') no-repeat center;
   }
   &_go-to-top {
     width: auto;
@@ -73,5 +70,22 @@
     height: 16px;
     padding: 0;
     background: url('../assets/img/search.svg') no-repeat center;
+  }
+  &_card {
+    line-height: 1.9;
+    padding: 0 32px 0 0;
+    background: url('../assets/img/arrow_red.svg') no-repeat right;
+  }
+  &_slider {
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    background: url('../assets/img/arrow_black.svg') no-repeat center;
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+    &:last-child {
+      transform: rotate(180deg);
+    }
   }
 }

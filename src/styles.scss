@@ -14,6 +14,12 @@
   width: 100% !important;
 }
 
+//mat-card
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+  padding: 0;
+}
+
 //dialog overlay
 .cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
   background: #1E212C;
@@ -110,4 +116,22 @@
   }
 }
 
+.cards {
+
+ .date {
+   position: relative;
+   padding-right: 12px;
+   margin-right: 12px;
+   &::after {
+     content: '';
+     position: absolute;
+     right: 0;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 1px;
+     height: 12px;
+     background-color: $gray;
+   }
+ }
+}
 
