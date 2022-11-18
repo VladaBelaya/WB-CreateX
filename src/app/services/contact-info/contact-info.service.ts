@@ -21,7 +21,7 @@ export class ContactInfoService {
       value: 'hello@createx.com'
     },
     phone: {
-      href: 'tel:+74055550128',
+      href: '74055550128',
       value: '(405) 555-0128'
     },
     address: '2464 Royal Ln. Mesa, New Jersey 45463, USA'

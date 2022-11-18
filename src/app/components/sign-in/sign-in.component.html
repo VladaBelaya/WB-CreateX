@@ -10,7 +10,7 @@
     <label for="password" class="label modal__label">
       Password
       <div class="password-container">
-        <input class="input modal__input input_password" [type]="!toggleVisible ? 'text' : 'password'" name="password" id="password" placeholder="Enter password">
+        <input class="input modal__input input_password" [type]="toggleVisible ? 'password' : 'text'" name="password" id="password" placeholder="Enter password">
         <button (click)="toggleVisiblePassword($event)" class="btn btn_password"></button>
       </div>
     </label>

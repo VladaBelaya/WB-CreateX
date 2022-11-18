@@ -27,7 +27,6 @@ import { DistributionComponent } from './components/distribution/distribution.co
 import { SearchComponent } from './components/search/search.component';
 import { CardAuthorComponent } from './components/card-author/card-author.component';
 import { CardTrendComponent } from './components/card-trend/card-trend.component';
-import { TagComponent } from './tags/tag/tag.component';
 import { DateComponent } from './components/date/date.component';
 import { OurBlogComponent } from './components/our-blog/our-blog.component';
 import { BlogCardComponent } from './components/blog-cards/blog-card/blog-card.component';
@@ -59,7 +58,6 @@ const mapConfig: YaConfig = {
     SearchComponent,
     CardAuthorComponent,
     CardTrendComponent,
-    TagComponent,
     DateComponent,
     OurBlogComponent,
     BlogCardComponent,

@@ -17,7 +17,7 @@
               <div class="icon icon_phone info__icon"></div>
               <div class="info__content">
                 <div class="info__description">Call us:</div>
-                <a [href]="contactInfo.phone.href" class="info__link">{{ contactInfo.phone.value }}</a>
+                <a [href]="'tel:+' + contactInfo.phone.href" class="info__link">{{ contactInfo.phone.value }}</a>
               </div>
             </li>
             <li class="info__item">

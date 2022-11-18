@@ -37,7 +37,7 @@
         <h2 class="subheading footer__subheading">CONTACT&nbsp;US</h2>
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="footer__link-flex" [href]="contactInfo.phone.href">
+            <a class="footer__link-flex" [href]="'tel:+' + contactInfo.phone.href">
               <span class="icon icon_min icon_phone-min footer__icon"></span><span>{{ contactInfo.phone.value }}</span>
             </a>
           </li>

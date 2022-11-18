@@ -48,11 +48,11 @@ export class IconService {
 
   }
 
-  addPath(name: string, path: string): void {
-    void this.iconRegistry.addSvgIcon(name, this.sanitizer.bypassSecurityTrustResourceUrl(path));
+  addPath(name: string, path: string) {
+    this.iconRegistry.addSvgIcon(name, this.sanitizer.bypassSecurityTrustResourceUrl(path));
   }
 
-  private initIcons(): void {
+  private initIcons() {
     for (const icon of ICONS) {
       this.addPath(icon.name, icon.path);
     }
