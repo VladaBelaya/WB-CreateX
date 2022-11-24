@@ -42,7 +42,7 @@ export class ChartsService {
   public data$: Observable<ResponseDataCharts>
   public mainChart$: Observable<any>
   public lineChartLegend: boolean = true;
-  public shareData$ = this.http.get<ResponseDataCharts[]>('../assets/data.json')
+  public shareData$ = this.http.get<ResponseDataCharts[]>('assets/data.json')
     .pipe(
       tap((result) => this.initialData.push(...result)),
       shareReplay(1)
