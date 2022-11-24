@@ -1,0 +1,6 @@
+<div class="chars-container">
+  <ul *ngIf="data$ | async as charts" class="charts">
+    <app-chart *ngFor="let chart of charts" [chart]="chart"></app-chart>
+  </ul>
+</div>
+

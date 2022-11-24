@@ -1,0 +1,11 @@
+.chars-container {
+  overflow-x: auto;
+  margin-bottom: 50px;
+}
+.charts {
+  width: 3350px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Tag} from "../../tags/tags.component";
+import {Tag} from "../tags/tags.component";
 
 @Component({
   selector: 'app-single-post-aside',

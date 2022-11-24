@@ -1,0 +1,10 @@
+<li>
+  <div class="legend">ID графика: {{chart.id}}</div>
+  <canvas baseChart
+          width="800"
+          height="400"
+          [type]="'line'"
+          [datasets]="chart.datasets"
+          [labels]="chart.label">
+  </canvas>
+</li>

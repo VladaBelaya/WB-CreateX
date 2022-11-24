@@ -3,9 +3,11 @@ import {RouterModule, Routes} from '@angular/router';
 import {ContactsComponent} from "./components/contacts/contacts.component";
 import {NotFoundComponent} from "./components/not-found/not-found.component";
 import {SinglePostComponent} from "./components/single-post/single-post.component";
+import {ChartsComponent} from "./components/charts/charts.component";
 
 export enum MainRoutes {
   Default = '',
+  Charts = 'charts',
   Contacts = 'contacts',
   Single_post = 'single-post',
   Not_found = 'not-found'
@@ -13,6 +15,7 @@ export enum MainRoutes {
 }
 
 const routes: Routes = [
+  {path: MainRoutes.Charts, component: ChartsComponent},
   {path: MainRoutes.Contacts, component: ContactsComponent},
   {path: MainRoutes.Single_post, component: SinglePostComponent},
   {path: MainRoutes.Not_found, component: NotFoundComponent},
