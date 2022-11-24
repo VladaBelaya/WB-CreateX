@@ -9,6 +9,7 @@ import {Observable} from "rxjs";
 })
 export class ChartsComponent implements OnInit {
   public data$:Observable<any> = this.chartsService.data$
+  public mainChart$:Observable<any> = this.chartsService.mainChart$
   @Input() legend:boolean = this.chartsService.lineChartLegend
   constructor(private chartsService: ChartsService) { }
 
