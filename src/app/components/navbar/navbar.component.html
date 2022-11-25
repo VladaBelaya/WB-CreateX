@@ -17,8 +17,14 @@
     </div>
     <div class="header__auth">
       <button class="btn btn_red">Get&nbsp;consultation</button>
-      <button (click)="openDialog()" class="btn btn_auth"><span class="btn__auth-icon"></span><span>Log in / Register</span>
-      </button>
+      <div class="btn btn_auth">
+        <span class="btn__auth-icon"></span>
+        <span class="flex-btn">
+          <button class="btn-auth sign-in" (click)="openDialogSignIn()">Log in&nbsp;/&nbsp;</button>
+
+          <button class="btn-auth sign-up" (click)="openDialogSignUp()"> Register</button>
+        </span>
+      </div>
     </div>
   </header>
 </div>

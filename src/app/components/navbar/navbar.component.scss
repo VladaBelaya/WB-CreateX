@@ -1,3 +1,4 @@
+@import '../../../styles/variables';
 .header {
   display: flex;
   justify-content: space-between;
@@ -13,5 +14,32 @@
   &__auth {
     display: flex;
     align-items: center;
+    .btn_red {
+      flex: 1 1 auto;
+    }
+  }
+}
+.flex-btn {
+  display: flex;
+}
+
+.sign-in {
+  flex: 1 1 auto;
+}
+.sign-up {
+  flex: 1 1 auto;
+}
+
+.btn_auth {
+  flex: 1 0 auto;
+}
+
+.btn-auth {
+  font-weight: 700;
+  line-height: 1.6;
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+  &:hover {
+    color: $red;
   }
 }

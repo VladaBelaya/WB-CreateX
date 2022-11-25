@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {SignUpComponent} from "../sign-up/sign-up.component";
+import {SignInComponent} from "../sign-in/sign-in.component";
 
 @Component({
   selector: 'app-navbar',
@@ -12,10 +13,15 @@ export class NavbarComponent {
   constructor(public dialog: MatDialog) {
   }
 
-  openDialog() {
-    this.dialog.open(SignUpComponent, {
+  openDialogSignIn() {
+    this.dialog.open(SignInComponent, {
       disableClose: true
     });
   }
 
+  openDialogSignUp() {
+    this.dialog.open(SignUpComponent, {
+      disableClose: true
+    });
+  }
 }

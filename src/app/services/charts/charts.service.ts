@@ -20,10 +20,10 @@ export interface ResponseDataCharts {
 }
 
 interface DataArgumentId {
-  [id: number]: ResponseDataCharts[]
+  [id: string]: ResponseDataCharts[]
 }
 
-interface chartDatasets {
+export interface ChartDatasets {
   data: number[],
   label: string,
   borderColor?: string,
@@ -36,14 +36,16 @@ interface Data {
 }
 
 export interface ChartConfig {
-  id: number,
-  datasets: chartDatasets[],
-  labels: string[]
+  id: number | string,
+  datasets: ChartDatasets[],
+  labels: string[],
+  name: string
 }
 
 export interface ChartMainConfig {
-  datasets: chartDatasets[],
-  labels: string[]
+  datasets: ChartDatasets[],
+  labels: string[],
+  name: string
 }
 
 @Injectable({
@@ -52,8 +54,7 @@ export interface ChartMainConfig {
 
 export class ChartsService {
   public initialData: ResponseDataCharts[] = []
-  public data$: Observable<ResponseDataCharts>
-  public mainChart$: Observable<ChartMainConfig>
+  public charts$: Observable<[ChartConfig, ChartMainConfig]>
   public lineChartLegend: boolean = true;
   public shareData$ = this.http.get<ResponseDataCharts[]>('assets/data.json')
     .pipe(
@@ -64,17 +65,14 @@ export class ChartsService {
     )
 
   constructor(private readonly http: HttpClient) {
-    this.data$ = this.shareData$
-      .pipe(
-        map((response: ResponseDataCharts[]) => this.groupBy(response, (response: ResponseDataCharts) => response.src_office_id)),
-        map((result) => this.groupById(result)),
+    this.charts$ = this.shareData$.pipe(
+      map((response) =>
+        [
+          ...this.groupById(this.groupByKey(response, (response: ResponseDataCharts) => response.src_office_id)),
+          this.createMainCharts(this.groupByKey(response, (response: ResponseDataCharts) => response.dt_date))
+        ] as [ChartConfig, ChartMainConfig]
       )
-
-    this.mainChart$ = this.shareData$
-      .pipe(
-        map((response: ResponseDataCharts[]) => this.groupBy(response, (response: ResponseDataCharts) => response.dt_date)),
-        map((result) => this.createMainCharts(result)),
-      )
+    )
   }
 
   private setLabel(label: ChartFilters): string {
@@ -95,29 +93,31 @@ export class ChartsService {
   createMainCharts(data: Data): ChartMainConfig {
     const keys: ChartFilters[] = Object.values(ChartFilters)
     const allDates: string[] = Object.keys(data)
-    const daysWithSorted: string[] = Object.values(data);
+    const daysWithSorted: Array<ResponseDataCharts[]> = Object.values(data);
     const mainChartsData = keys.map((key: ChartFilters) => ({
         label: this.setLabel(key),
-        data: daysWithSorted.map((day: any) =>
-          day.reduce((accumulator: any, current: any) =>
+        data: daysWithSorted.map((day:ResponseDataCharts[]) =>
+          day.reduce((accumulator:number, current:ResponseDataCharts) =>
             accumulator + (current[key]), 0))
       })
     )
     return {
       datasets: mainChartsData,
-      labels: allDates
+      labels: allDates,
+      name: 'Общий график по всем складам'
     }
   }
 
-  public groupById<T>(data: DataArgumentId): any {
-    return Object.keys(data).map((id: any) =>
-      data[+id].reduce((accumulator: any, current: any) => {
+  public groupById(data: DataArgumentId): ChartConfig[] {
+    return Object.keys(data).map(id =>
+      data[id].reduce((accumulator, current) => {
         accumulator.id = current.src_office_id
         accumulator.datasets[0].data.push(current.qty_orders)
         accumulator.datasets[1].data.push(current.qty_new)
         accumulator.datasets[2].data.push(current.qty_delivered)
         accumulator.datasets[3].data.push(current.qty_return)
         accumulator.labels.push(current.dt_date)
+        accumulator.name = current.office_name
         return {...accumulator}
       }, {
         id,
@@ -125,7 +125,7 @@ export class ChartsService {
           {
             data: [],
             label: 'Заказы',
-            tension: 0.5
+            tension: 0.5,
           },
           {
             data: [],
@@ -144,11 +144,12 @@ export class ChartsService {
           }
         ],
         labels: [],
-      })
+        name: ''
+      } as ChartConfig)
     )
   }
 
-  public groupBy = <T, K extends keyof any>(list: T[], getKey: (item: T) => K) =>
+  public groupByKey = <T, K extends keyof any>(list: T[], getKey: (item: T) => K) =>
     list.reduce((previous, currentItem) => {
       const group = getKey(currentItem);
       if (!previous[group]) previous[group] = [];

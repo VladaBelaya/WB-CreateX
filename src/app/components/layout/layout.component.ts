@@ -1,5 +1,4 @@
-import {Component, Input} from '@angular/core';
-import {SocialNetworkName} from "../social-networks/social-icon/social-icon.component";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-layout',
@@ -7,6 +6,5 @@ import {SocialNetworkName} from "../social-networks/social-icon/social-icon.comp
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent {
-  @Input() icons!: SocialNetworkName[]
 
 }

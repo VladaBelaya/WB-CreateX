@@ -32,9 +32,9 @@ import {BlogCardComponent} from './components/blog-cards/blog-card/blog-card.com
 import {ColorfulDirective} from './directives/colorful.directive';
 import {BlogCardsComponent} from './components/blog-cards/blog-cards.component';
 import {TagsComponent} from './components/tags/tags.component';
-import {NgChartsModule} from 'ng2-charts';
 import {ChartsComponent} from './components/charts/charts.component';
-import { ChartComponent } from './components/charts/chart/chart.component';
+import {ChartComponent} from './components/charts/chart/chart.component';
+import {ChartsDirective} from "./components/charts/charts.directive";
 
 const mapConfig: YaConfig = {
   apikey: environment.API_YA,
@@ -63,11 +63,12 @@ const mapConfig: YaConfig = {
     DateComponent,
     OurBlogComponent,
     BlogCardComponent,
-    ColorfulDirective,
     BlogCardsComponent,
     TagsComponent,
     ChartsComponent,
-    ChartComponent
+    ChartComponent,
+    ColorfulDirective,
+    ChartsDirective
   ],
   imports: [
     BrowserModule,
@@ -78,8 +79,7 @@ const mapConfig: YaConfig = {
     HttpClientModule,
     MatButtonModule,
     MatDialogModule,
-    MatCardModule,
-    NgChartsModule
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ChartMainConfig, ChartsService} from "../../services/charts/charts.service";
+import {Component} from '@angular/core';
+import {ChartConfig, ChartMainConfig, ChartsService} from "../../services/charts/charts.service";
 import {Observable} from "rxjs";
 
 @Component({
@@ -7,13 +7,9 @@ import {Observable} from "rxjs";
   templateUrl: './charts.component.html',
   styleUrls: ['./charts.component.scss']
 })
-export class ChartsComponent implements OnInit {
-  public data$:Observable<any> = this.chartsService.data$
-  public mainChart$:Observable<ChartMainConfig> = this.chartsService.mainChart$
-  @Input() legend:boolean = this.chartsService.lineChartLegend
-  constructor(private chartsService: ChartsService) { }
+export class ChartsComponent {
+  public charts$: Observable<[ChartConfig, ChartMainConfig]> = this.chartsService.charts$
 
-  ngOnInit(): void {
+  constructor(private chartsService: ChartsService) {
   }
-
 }
