@@ -9,6 +9,18 @@
 @import 'styles/checkbox';
 @import 'styles/textarea';
 
+.mat-spinner {
+  width: 50px !important;
+  height: 50px !important;
+  & svg {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  & circle {
+    stroke: $red;
+  }
+}
+
 //ya-map
 .ymaps-2-1-79-map {
   width: 100% !important;

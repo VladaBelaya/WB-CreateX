@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {ContactsComponent} from './components/pages/contacts/contacts.component';
+import {ContactsComponent} from './pages/contacts/contacts.component';
 import {SignInComponent} from './components/auth/sign-in/sign-in.component';
 import {SignUpComponent} from './components/auth/sign-up/sign-up.component';
 import {AngularYandexMapsModule, YaConfig} from "angular8-yandex-maps";
@@ -19,23 +19,24 @@ import {SearchComponent} from './components/common/search/search.component';
 import {BaseHrefService, WINDOW_PROVIDERS} from "./services/base-href/base-href.service";
 import {SocialNetworksComponent} from "./components/common/social-networks/social-networks.component";
 import {SocialIconComponent} from "./components/common/social-networks/social-icon/social-icon.component";
-import {NavbarComponent} from "./components/navbar-footer/navbar/navbar.component";
-import {FooterComponent} from "./components/navbar-footer/footer/footer.component";
-import {SinglePostComponent} from "./components/pages/blog/single-post/single-post.component";
-import {SinglePostContentComponent} from "./components/pages/blog/single-post-content/single-post-content.component";
-import {SinglePostAsideComponent} from "./components/pages/blog/single-post-aside/single-post-aside.component";
-import {DistributionComponent} from "./components/pages/blog/distribution/distribution.component";
-import {CardAuthorComponent} from "./components/pages/blog/single-post-aside/card-author/card-author.component";
-import {CardTrendComponent} from "./components/pages/blog/single-post-aside/card-trend/card-trend.component";
-import {DateComponent} from "./components/pages/blog/date/date.component";
-import {OurBlogComponent} from "./components/pages/blog/our-blog/our-blog.component";
+import {NavbarComponent} from "./components/common/navbar/navbar.component";
+import {FooterComponent} from "./components/common/footer/footer.component";
+import {SinglePostComponent} from "./pages/blog/single-post/single-post.component";
+import {SinglePostContentComponent} from "./pages/blog/single-post-content/single-post-content.component";
+import {SinglePostAsideComponent} from "./pages/blog/single-post-aside/single-post-aside.component";
+import {DistributionComponent} from "./pages/blog/distribution/distribution.component";
+import {CardAuthorComponent} from "./pages/blog/single-post-aside/card-author/card-author.component";
+import {CardTrendComponent} from "./pages/blog/single-post-aside/card-trend/card-trend.component";
+import {DateComponent} from "./pages/blog/date/date.component";
+import {OurBlogComponent} from "./pages/blog/our-blog/our-blog.component";
 import {BlogCardComponent} from "./components/common/blog-cards/blog-card/blog-card.component";
 import {BlogCardsComponent} from "./components/common/blog-cards/blog-cards.component";
-import {TagsComponent} from "./components/pages/blog/tags/tags.component";
-import {ChartsComponent} from "./components/pages/charts/charts.component";
-import {ChartComponent} from "./components/pages/charts/chart/chart.component";
+import {TagsComponent} from "./pages/blog/tags/tags.component";
+import {ChartsComponent} from "./pages/charts/charts.component";
+import {ChartComponent} from "./pages/charts/chart/chart.component";
 import {ColorfulDirective} from "./directives/colorful.directive";
-import {ChartsDirective} from "./components/pages/charts/charts.directive";
+import {ChartsDirective} from "./pages/charts/charts.directive";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 const mapConfig: YaConfig = {
   apikey: environment.API_YA,
@@ -80,7 +81,8 @@ const mapConfig: YaConfig = {
     HttpClientModule,
     MatButtonModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     WINDOW_PROVIDERS,

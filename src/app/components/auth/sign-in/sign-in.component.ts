@@ -6,6 +6,7 @@ import {SocialNetworkName} from "../../common/social-networks/social-icon/social
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss']
 })
+
 export class SignInComponent {
   public toggleVisible: boolean = true
   @Input() icons!: SocialNetworkName[]

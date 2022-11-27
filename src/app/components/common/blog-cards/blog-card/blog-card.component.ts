@@ -6,6 +6,7 @@ import {BlogCard} from "../blog-cards.component";
   templateUrl: './blog-card.component.html',
   styleUrls: ['./blog-card.component.scss']
 })
+
 export class BlogCardComponent {
   @Input() public card!: BlogCard
 }

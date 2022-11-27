@@ -1,7 +1,0 @@
-<div class="charts-container">
-  <ng-container *ngIf="charts$ | async as charts">
-    <div class="charts">
-      <app-chart *ngFor="let chart of charts" [chart]="chart"></app-chart>
-    </div>
-  </ng-container>
-</div>

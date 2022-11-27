@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {ContactsComponent} from "./components/pages/contacts/contacts.component";
+import {ContactsComponent} from "./pages/contacts/contacts.component";
 import {NotFoundComponent} from "./components/common/not-found/not-found.component";
-import {ChartsComponent} from "./components/pages/charts/charts.component";
-import {SinglePostComponent} from "./components/pages/blog/single-post/single-post.component";
+import {ChartsComponent} from "./pages/charts/charts.component";
+import {SinglePostComponent} from "./pages/blog/single-post/single-post.component";
 
 export enum MainRoutes {
   Default = '',

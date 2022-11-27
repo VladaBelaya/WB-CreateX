@@ -1,0 +1,8 @@
+@import '../../../../styles/variables';
+
+.date {
+  padding-left: 26px;
+  color: $gray;
+  line-height: 1.4;
+  background: url('../../../../assets/img/calendar.svg') left center no-repeat;
+}

@@ -15,7 +15,9 @@ export const WINDOW_PROVIDERS = [
 
 export class BaseHrefService {
 
-  constructor(@Inject(WINDOW) private window: Window) {}
+  constructor(@Inject(WINDOW) private window: Window) {
+    console.log(this.baseHref)
+  }
 
   public get baseHref() : string {
     return this.window.location.host;

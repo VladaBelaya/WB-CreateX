@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {IconService} from "./services/icon/icon.service";
+import {BaseHrefService} from "./services/base-href/base-href.service";
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,9 @@ import {IconService} from "./services/icon/icon.service";
 export class AppComponent {
   public toggleVisible: boolean = true
 
-  constructor(private readonly iconService: IconService) {
-  }
-
-  toggleType(toggleVisible: boolean) {
-    toggleVisible = !this.toggleVisible
+  constructor(
+    private readonly iconService: IconService,
+    private readonly baseHrefService: BaseHrefService
+  ) {
   }
 }
