@@ -9,6 +9,7 @@ import {SocialNetworkName} from "../../common/social-networks/social-icon/social
 export class SignUpComponent {
   public toggleVisible: boolean = true
   @Input() icons!: SocialNetworkName[]
+
   toggleVisiblePassword($event: MouseEvent) {
     $event.preventDefault()
     this.toggleVisible = !this.toggleVisible

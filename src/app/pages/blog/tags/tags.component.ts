@@ -7,10 +7,10 @@ export type Tag = { title: string; link: string }
   templateUrl: './tags.component.html',
   styleUrls: ['./tags.component.scss']
 })
+
 export class TagsComponent {
   @Input() public tags: Tag[] = [
     {title: 'learning', link: 'learning'},
     {title: 'HR', link: 'HR'}
   ]
-
 }

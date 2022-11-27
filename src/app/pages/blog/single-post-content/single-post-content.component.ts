@@ -5,8 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './single-post-content.component.html',
   styleUrls: ['./single-post-content.component.scss']
 })
-export class SinglePostContentComponent {
 
-  constructor() { }
-
-}
+export class SinglePostContentComponent {}

@@ -6,6 +6,7 @@ import {BlogCard} from "../../../components/common/blog-cards/blog-cards.compone
   templateUrl: './our-blog.component.html',
   styleUrls: ['./our-blog.component.scss']
 })
+
 export class OurBlogComponent {
   public readonly cards: BlogCard[] = [
     {

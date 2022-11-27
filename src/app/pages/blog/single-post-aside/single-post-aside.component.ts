@@ -6,6 +6,7 @@ import {Tag} from "../tags/tags.component";
   templateUrl: './single-post-aside.component.html',
   styleUrls: ['./single-post-aside.component.scss']
 })
+
 export class SinglePostAsideComponent {
   public tags: Tag[] = [
     {title: 'marketing', link: 'marketing'},
@@ -15,5 +16,4 @@ export class SinglePostAsideComponent {
     {title: 'HR', link: 'HR'},
     {title: 'self-development', link: 'self-development'},
   ]
-
 }

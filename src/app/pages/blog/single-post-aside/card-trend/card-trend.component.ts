@@ -5,6 +5,7 @@ import {Component} from '@angular/core';
   templateUrl: './card-trend.component.html',
   styleUrls: ['./card-trend.component.scss']
 })
+
 export class CardTrendComponent {
   public cards = [
     {
@@ -26,5 +27,4 @@ export class CardTrendComponent {
       link: ''
     }
   ]
-
 }

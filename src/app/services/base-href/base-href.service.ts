@@ -19,7 +19,7 @@ export class BaseHrefService {
     console.log(this.baseHref)
   }
 
-  public get baseHref() : string {
+  public get baseHref(): string {
     return this.window.location.host;
   }
 }

@@ -13,6 +13,7 @@ type CollectionIcons = {
   templateUrl: './social-networks.component.html',
   styleUrls: ['./social-networks.component.scss']
 })
+
 export class SocialNetworksComponent {
   public collectionIcon: CollectionIcons = {
     default: ['Facebook', 'Twitter', 'Youtube', 'Telegram', 'Instagram', 'Linkedin'],
@@ -27,12 +28,7 @@ export class SocialNetworksComponent {
 
   color = 'red'
 
-  constructor() {
-  }
-
   get icons(): SocialNetworkName[] {
-    // @ts-ignore
-    return this.collectionIcon[this.name]
+    return this.collectionIcon[this.name as keyof CollectionIcons]
   }
-
 }

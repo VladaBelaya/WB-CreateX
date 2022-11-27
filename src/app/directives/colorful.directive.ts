@@ -11,7 +11,6 @@ export class ColorfulDirective {
   @HostListener('mouseenter')
   private onMouseEnter(): void {
     this.removeGrayScale();
-
   }
 
   @HostListener('mouseleave')

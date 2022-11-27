@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {IconService} from "./services/icon/icon.service";
 import {BaseHrefService} from "./services/base-href/base-href.service";
 

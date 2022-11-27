@@ -7,5 +7,4 @@ import {Component, Input} from '@angular/core';
 })
 export class DateComponent {
   @Input() date: string = 'August 4, 2022'
-
 }

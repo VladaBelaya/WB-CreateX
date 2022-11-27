@@ -7,9 +7,9 @@ import {delay, Observable} from "rxjs";
   templateUrl: './charts.component.html',
   styleUrls: ['./charts.component.scss']
 })
+
 export class ChartsComponent {
   public charts$: Observable<[ChartConfig, ChartMainConfig]> = this.chartsService.charts$.pipe(delay(750))
 
-  constructor(private chartsService: ChartsService) {
-  }
+  constructor(private chartsService: ChartsService) {}
 }

@@ -10,8 +10,7 @@ import {SignInComponent} from "../../auth/sign-in/sign-in.component";
 })
 export class NavbarComponent {
 
-  constructor(public dialog: MatDialog) {
-  }
+  constructor(public dialog: MatDialog) {}
 
   openDialogSignIn() {
     this.dialog.open(SignInComponent, {

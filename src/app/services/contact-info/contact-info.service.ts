@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 type ContactMap = {
   href: string;
@@ -26,5 +26,5 @@ export class ContactInfoService {
     },
     address: '2464 Royal Ln. Mesa, New Jersey 45463, USA'
   }
-  constructor() { }
+
 }

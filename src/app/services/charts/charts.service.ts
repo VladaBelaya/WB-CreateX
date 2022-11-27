@@ -96,8 +96,8 @@ export class ChartsService {
     const daysWithSorted: Array<ResponseDataCharts[]> = Object.values(data);
     const mainChartsData = keys.map((key: ChartFilters) => ({
         label: this.setLabel(key),
-        data: daysWithSorted.map((day:ResponseDataCharts[]) =>
-          day.reduce((accumulator:number, current:ResponseDataCharts) =>
+        data: daysWithSorted.map((day: ResponseDataCharts[]) =>
+          day.reduce((accumulator: number, current: ResponseDataCharts) =>
             accumulator + (current[key]), 0))
       })
     )

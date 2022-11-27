@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {ContactInfo, ContactInfoService} from "../../services/contact-info/contact-info.service";
 import {SocialNetworkName} from "../../components/common/social-networks/social-icon/social-icon.component";
 
@@ -19,7 +19,7 @@ interface MapConfig {
   styleUrls: ['./contacts.component.scss']
 })
 
-export class ContactsComponent implements OnInit {
+export class ContactsComponent {
   public contactInfo: ContactInfo
   public readonly mapConfig: MapConfig = {
     centerMap: [55.751952, 37.600739],
@@ -30,8 +30,4 @@ export class ContactsComponent implements OnInit {
   constructor(private contactInfoService: ContactInfoService) {
     this.contactInfo = contactInfoService.contactInfo
   }
-
-  ngOnInit(): void {
-  }
-
 }
