@@ -35,6 +35,7 @@ import {TagsComponent} from './components/tags/tags.component';
 import {ChartsComponent} from './components/charts/charts.component';
 import {ChartComponent} from './components/charts/chart/chart.component';
 import {ChartsDirective} from "./components/charts/charts.directive";
+import {BaseHrefService, WINDOW_PROVIDERS} from "./services/base-href/base-href.service";
 
 const mapConfig: YaConfig = {
   apikey: environment.API_YA,
@@ -81,7 +82,10 @@ const mapConfig: YaConfig = {
     MatDialogModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [
+    WINDOW_PROVIDERS,
+    BaseHrefService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
