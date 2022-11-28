@@ -14,9 +14,11 @@
   color: $gray;
   font-weight: 700;
   font-size: $fs14;
+
   &:not(:last-child) {
     margin-right: 12px;
   }
+
   &:hover {
     border-color: $red;
     background-color: $red;

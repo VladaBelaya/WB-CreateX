@@ -1,4 +1,4 @@
-<div  class="modal">
+<div class="modal">
   <button mat-dialog-close="" class="btn btn_close"></button>
   <div class="modal-subheading">Sign up</div>
   <p class="modal-description">Registration takes less than a minute but gives you full control over your studying.</p>
@@ -14,20 +14,22 @@
     <label for="password" class="label modal__label">
       Password
       <div class="password-container">
-        <input class="input modal__input input_password" [type]="toggleVisible ? 'password' : 'text'" name="password" id="password" placeholder="Enter password">
+        <input class="input modal__input input_password" [type]="toggleVisible ? 'password' : 'text'" name="password"
+               id="password" placeholder="Enter password">
         <button (click)="toggleVisiblePassword($event)" class="btn btn_password"></button>
       </div>
     </label>
     <label for="passwordConfirm" class="label modal__label">
       Confirm Password
       <div class="password-container">
-        <input class="input modal__input input_password" [type]="toggleVisible ? 'password' : 'text'" name="passwordConfirm" id="passwordConfirm" placeholder="Reenter password">
+        <input class="input modal__input input_password" [type]="toggleVisible ? 'password' : 'text'"
+               name="passwordConfirm" id="passwordConfirm" placeholder="Reenter password">
         <button (click)="toggleVisiblePassword($event)" class="btn btn_password"></button>
       </div>
     </label>
     <div class="agreement">
-        <input type="checkbox" class="checkbox" id="remember" name="agreement" value="yes">
-        <label for="remember">Remember me</label>
+      <input type="checkbox" class="checkbox" id="remember" name="agreement" value="yes">
+      <label for="remember">Remember me</label>
     </div>
     <button class="btn btn_red" type="submit">Sign up</button>
     <div class="account">

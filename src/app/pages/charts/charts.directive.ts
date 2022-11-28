@@ -6,7 +6,7 @@ import {ChartConfig, ChartMainConfig} from "../../services/charts/charts.service
   selector: '[appChart]'
 })
 export class ChartsDirective implements AfterViewInit {
-  @Input() public data!:  ChartConfig | ChartMainConfig;
+  @Input() public data!: ChartConfig | ChartMainConfig;
 
   constructor(private readonly el: ElementRef<HTMLCanvasElement>) {
     Chart.register(...registerables);
