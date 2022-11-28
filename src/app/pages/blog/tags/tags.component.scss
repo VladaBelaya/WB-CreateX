@@ -1,4 +1,4 @@
-@import '../../../../styles/variables';
+@import "../../../../styles/variables";
 
 .tags {
   display: flex;
@@ -10,7 +10,8 @@
   padding: 6px 16px;
   border: 1px solid $light_gray;
   border-radius: 4px;
-  transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
   color: $gray;
   font-weight: 700;
   font-size: $fs14;

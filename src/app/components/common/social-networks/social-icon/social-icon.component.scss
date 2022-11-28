@@ -1,4 +1,4 @@
-@import '../../../../../styles/variables';
+@import "../../../../../styles/variables";
 
 :host {
   &:not(:last-child) {
@@ -6,7 +6,8 @@
   }
 }
 
-.subscriptions__social-networks, .list_blog {
+.subscriptions__social-networks,
+.list_blog {
   :host {
     &:not(:last-child) {
       margin-right: 12px;
@@ -23,7 +24,6 @@
       }
     }
   }
-
 
   .list_opacity .link {
     background-color: $white;

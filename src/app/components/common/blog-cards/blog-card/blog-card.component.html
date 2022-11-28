@@ -1,17 +1,21 @@
 <mat-card class="card">
   <div class="bg">
-    <img colorful class="img" [src]="card.src" alt="blog">
-    <div class="category" [ngClass]="card.type | lowercase">{{card.type}}</div>
+    <img colorful class="img" [src]="card.src" alt="blog" />
+    <div class="category" [ngClass]="card.type | lowercase">
+      {{ card.type }}
+    </div>
   </div>
 
   <div>
     <div class="info">
-      <div class="type">{{card.category}}</div>
+      <div class="type">{{ card.category }}</div>
       <app-date [date]="card.date"></app-date>
-      <div class="time-read">{{card.readTime}}</div>
+      <div class="time-read">{{ card.readTime }}</div>
     </div>
-    <div class="header">{{card.title}}</div>
-    <p class="paragraph">{{card.description}}</p>
+    <div class="header">{{ card.title }}</div>
+    <p class="paragraph">{{ card.description }}</p>
   </div>
-  <a [href]="card.link" class="btn btn_card">{{card.type === 'Podcast' ? 'Listen' : 'Read' }}</a>
+  <a [href]="card.link" class="btn btn_card">{{
+    card.type === "Podcast" ? "Listen" : "Read"
+  }}</a>
 </mat-card>

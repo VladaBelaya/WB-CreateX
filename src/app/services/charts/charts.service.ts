@@ -1,12 +1,12 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {map, Observable, shareReplay, tap} from "rxjs";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { map, Observable, shareReplay, tap } from 'rxjs';
 
 export enum ChartFilters {
   ORDER = 'qty_orders',
   NEW = 'qty_new',
   DELIVERED = 'qty_delivered',
-  RETURN = 'qty_return'
+  RETURN = 'qty_return',
 }
 
 export interface ResponseDataCharts {
@@ -20,136 +20,156 @@ export interface ResponseDataCharts {
 }
 
 interface DataArgumentId {
-  [id: string]: ResponseDataCharts[]
+  [id: string]: ResponseDataCharts[];
 }
 
 export interface ChartDatasets {
-  data: number[],
-  label: string,
-  borderColor?: string,
-  backgroundColor?: string,
-  tension?: number
+  data: number[];
+  label: string;
+  borderColor?: string;
+  backgroundColor?: string;
+  tension?: number;
 }
 
 interface Data {
-  [date: number]: ResponseDataCharts[]
+  [date: number]: ResponseDataCharts[];
 }
 
 export interface ChartConfig {
-  id: number | string,
-  datasets: ChartDatasets[],
-  labels: string[],
-  name: string
+  id: number | string;
+  datasets: ChartDatasets[];
+  labels: string[];
+  name: string;
 }
 
 export interface ChartMainConfig {
-  datasets: ChartDatasets[],
-  labels: string[],
-  name: string
+  datasets: ChartDatasets[];
+  labels: string[];
+  name: string;
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
 export class ChartsService {
-  public initialData: ResponseDataCharts[] = []
-  public charts$: Observable<[ChartConfig, ChartMainConfig]>
+  public initialData: ResponseDataCharts[] = [];
+  public charts$: Observable<[ChartConfig, ChartMainConfig]>;
   public lineChartLegend: boolean = true;
-  public shareData$ = this.http.get<ResponseDataCharts[]>('assets/data.json')
+  public shareData$ = this.http
+    .get<ResponseDataCharts[]>('assets/data.json')
     .pipe(
       tap((result: ResponseDataCharts[]) => {
-        this.initialData.push(...result)
+        this.initialData.push(...result);
       }),
       shareReplay(1)
-    )
+    );
 
   constructor(private readonly http: HttpClient) {
     this.charts$ = this.shareData$.pipe(
-      map((response) =>
-        [
-          ...this.groupById(this.groupByKey(response, (response: ResponseDataCharts) => response.src_office_id)),
-          this.createMainCharts(this.groupByKey(response, (response: ResponseDataCharts) => response.dt_date))
-        ] as [ChartConfig, ChartMainConfig]
+      map(
+        (response) =>
+          [
+            ...this.groupById(
+              this.groupByKey(
+                response,
+                (response: ResponseDataCharts) => response.src_office_id
+              )
+            ),
+            this.createMainCharts(
+              this.groupByKey(
+                response,
+                (response: ResponseDataCharts) => response.dt_date
+              )
+            ),
+          ] as [ChartConfig, ChartMainConfig]
       )
-    )
+    );
   }
 
   private setLabel(label: ChartFilters): string {
     switch (label) {
       case ChartFilters.ORDER:
-        return 'Заказы'
+        return 'Заказы';
       case ChartFilters.DELIVERED:
-        return 'Доставлено'
+        return 'Доставлено';
       case ChartFilters.RETURN:
-        return 'Возвраты'
+        return 'Возвраты';
       case ChartFilters.NEW:
-        return 'Новые'
+        return 'Новые';
       default:
-        return ''
+        return '';
     }
   }
 
   createMainCharts(data: Data): ChartMainConfig {
-    const keys: ChartFilters[] = Object.values(ChartFilters)
-    const allDates: string[] = Object.keys(data)
+    const keys: ChartFilters[] = Object.values(ChartFilters);
+    const allDates: string[] = Object.keys(data);
     const daysWithSorted: Array<ResponseDataCharts[]> = Object.values(data);
     const mainChartsData = keys.map((key: ChartFilters) => ({
-        label: this.setLabel(key),
-        data: daysWithSorted.map((day: ResponseDataCharts[]) =>
-          day.reduce((accumulator: number, current: ResponseDataCharts) =>
-            accumulator + (current[key]), 0))
-      })
-    )
+      label: this.setLabel(key),
+      data: daysWithSorted.map((day: ResponseDataCharts[]) =>
+        day.reduce(
+          (accumulator: number, current: ResponseDataCharts) =>
+            accumulator + current[key],
+          0
+        )
+      ),
+    }));
     return {
       datasets: mainChartsData,
       labels: allDates,
-      name: 'Общий график по всем складам'
-    }
+      name: 'Общий график по всем складам',
+    };
   }
 
   public groupById(data: DataArgumentId): ChartConfig[] {
-    return Object.keys(data).map(id =>
-      data[id].reduce((accumulator, current) => {
-        accumulator.id = current.src_office_id
-        accumulator.datasets[0].data.push(current.qty_orders)
-        accumulator.datasets[1].data.push(current.qty_new)
-        accumulator.datasets[2].data.push(current.qty_delivered)
-        accumulator.datasets[3].data.push(current.qty_return)
-        accumulator.labels.push(current.dt_date)
-        accumulator.name = current.office_name
-        return {...accumulator}
-      }, {
-        id,
-        datasets: [
-          {
-            data: [],
-            label: 'Заказы',
-            tension: 0.5,
-          },
-          {
-            data: [],
-            label: 'Новые',
-            tension: 0.5
-          },
-          {
-            data: [],
-            label: 'Доставлено',
-            tension: 0.5
-          },
-          {
-            data: [],
-            label: 'Возвраты',
-            tension: 0.5
-          }
-        ],
-        labels: [],
-        name: ''
-      } as ChartConfig)
-    )
+    return Object.keys(data).map((id) =>
+      data[id].reduce(
+        (accumulator, current) => {
+          accumulator.id = current.src_office_id;
+          accumulator.datasets[0].data.push(current.qty_orders);
+          accumulator.datasets[1].data.push(current.qty_new);
+          accumulator.datasets[2].data.push(current.qty_delivered);
+          accumulator.datasets[3].data.push(current.qty_return);
+          accumulator.labels.push(current.dt_date);
+          accumulator.name = current.office_name;
+          return { ...accumulator };
+        },
+        {
+          id,
+          datasets: [
+            {
+              data: [],
+              label: 'Заказы',
+              tension: 0.5,
+            },
+            {
+              data: [],
+              label: 'Новые',
+              tension: 0.5,
+            },
+            {
+              data: [],
+              label: 'Доставлено',
+              tension: 0.5,
+            },
+            {
+              data: [],
+              label: 'Возвраты',
+              tension: 0.5,
+            },
+          ],
+          labels: [],
+          name: '',
+        } as ChartConfig
+      )
+    );
   }
 
-  public groupByKey = <T, K extends keyof any>(list: T[], getKey: (item: T) => K) =>
+  public groupByKey = <T, K extends keyof any>(
+    list: T[],
+    getKey: (item: T) => K
+  ) =>
     list.reduce((previous, currentItem) => {
       const group = getKey(currentItem);
       if (!previous[group]) previous[group] = [];

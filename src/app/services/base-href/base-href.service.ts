@@ -1,22 +1,23 @@
-import {FactoryProvider, Inject, Injectable, InjectionToken} from '@angular/core';
+import {
+  FactoryProvider,
+  Inject,
+  Injectable,
+  InjectionToken,
+} from '@angular/core';
 
 export const WINDOW = new InjectionToken<Window>('window');
 
 const windowProvider: FactoryProvider = {
   provide: WINDOW,
-  useFactory: () => window
+  useFactory: () => window,
 };
 
-export const WINDOW_PROVIDERS = [
-  windowProvider
-]
+export const WINDOW_PROVIDERS = [windowProvider];
 
 @Injectable()
-
 export class BaseHrefService {
-
   constructor(@Inject(WINDOW) private window: Window) {
-    console.log(this.baseHref)
+    console.log(this.baseHref);
   }
 
   public get baseHref(): string {

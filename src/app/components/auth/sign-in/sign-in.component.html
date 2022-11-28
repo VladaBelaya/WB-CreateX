@@ -1,23 +1,46 @@
 <div class="modal">
   <button mat-dialog-close="" class="btn btn_close"></button>
   <div class="modal-subheading">Sign in</div>
-  <p class="modal-description">Sign in to your account using email and password provided during registration.</p>
+  <p class="modal-description">
+    Sign in to your account using email and password provided during
+    registration.
+  </p>
   <form class="modal__form" action="" method="post">
     <label for="email" class="label modal__label">
       Email
-      <input class="input modal__input" type="email" name="email" id="email" placeholder="Your working email">
+      <input
+        class="input modal__input"
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Your working email"
+      />
     </label>
     <label for="password" class="label modal__label">
       Password
       <div class="password-container">
-        <input class="input modal__input input_password" [type]="toggleVisible ? 'password' : 'text'" name="password"
-               id="password" placeholder="Enter password">
-        <button (click)="toggleVisiblePassword($event)" class="btn btn_password"></button>
+        <input
+          class="input modal__input input_password"
+          [type]="toggleVisible ? 'password' : 'text'"
+          name="password"
+          id="password"
+          placeholder="Enter password"
+        />
+        <button
+          (click)="toggleVisiblePassword($event)"
+          class="btn btn_password"
+        ></button>
       </div>
     </label>
     <div class="agreement">
       <div>
-        <input type="checkbox" class="checkbox" id="keep-me" name="agreement" value="yes">
+        <input
+          type="checkbox"
+          class="checkbox"
+          id="keep-me"
+          name="agreement"
+          value="yes"
+        />
         <label for="keep-me">Keep me signed in</label>
       </div>
       <a href="#" class="link-red">Forgot password?</a>
@@ -30,6 +53,9 @@
   </form>
   <div class="subscriptions subscriptions__social-networks">
     <div class="subscriptions__text">Or sign in with</div>
-    <app-social-networks [isCenter]="true" [name]="'modal'"></app-social-networks>
+    <app-social-networks
+      [isCenter]="true"
+      [name]="'modal'"
+    ></app-social-networks>
   </div>
 </div>

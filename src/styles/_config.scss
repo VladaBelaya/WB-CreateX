@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 // Подключение шрифтов
 @mixin font($fname, $fstyle, $fweight, $furl) {
@@ -6,13 +6,13 @@
     font-family: $fname;
     font-style: $fstyle;
     font-weight: $fweight;
-    src: url($furl) format('woff2');
+    src: url($furl) format("woff2");
   }
 }
 
-@include font('lato', normal, 900, '../assets/fonts/Lato-Black.woff2');
-@include font('lato', normal, 700, '../assets/fonts/Lato-Bold.woff2');
-@include font('lato', normal, 400, '../assets/fonts/Lato-Regular.woff2');
+@include font("lato", normal, 900, "../assets/fonts/Lato-Black.woff2");
+@include font("lato", normal, 700, "../assets/fonts/Lato-Bold.woff2");
+@include font("lato", normal, 400, "../assets/fonts/Lato-Regular.woff2");
 
 //Сброс стилей
 * {
@@ -22,26 +22,32 @@
 }
 
 body {
-  font-family: 'lato', sans-serif;
+  font-family: "lato", sans-serif;
   font-size: $fs16;
   font-weight: 400;
   color: $black;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-a, img, svg, button {
+a,
+img,
+svg,
+button {
   display: inline-block;
 }
 
-label, input, textarea {
+label,
+input,
+textarea {
   display: block;
 }
 textarea {
   width: 100%;
-  font-family: 'lato', sans-serif;
+  font-family: "lato", sans-serif;
   resize: none;
 }
 
@@ -49,9 +55,10 @@ button {
   width: 100%;
 }
 
-button, input {
+button,
+input {
   border: none;
-  font-family: 'lato', sans-serif;
+  font-family: "lato", sans-serif;
   color: $black;
   background: transparent;
   outline: none;
@@ -73,7 +80,8 @@ img {
 }
 
 // input, textarea
-.input, .textarea {
+.input,
+.textarea {
   width: 100%;
   padding: 13px 16px;
   border: 1px solid $light_gray;

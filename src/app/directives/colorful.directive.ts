@@ -1,7 +1,7 @@
-import {Directive, ElementRef, HostListener} from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[colorful]'
+  selector: '[colorful]',
 })
 export class ColorfulDirective {
   constructor(private readonly el: ElementRef) {
@@ -19,17 +19,16 @@ export class ColorfulDirective {
   }
 
   private addGrayScale(): void {
-    this.el.nativeElement.style.filter = 'grayscale(100%)'
+    this.el.nativeElement.style.filter = 'grayscale(100%)';
   }
 
   private removeGrayScale(): void {
-    this.el.nativeElement.style.filter = 'grayscale(0%)'
+    this.el.nativeElement.style.filter = 'grayscale(0%)';
   }
 
   private initStyles(): void {
-    this.el.nativeElement.style.filter = 'grayscale(100%)'
-    this.el.nativeElement.style.cursor = 'pointer'
+    this.el.nativeElement.style.filter = 'grayscale(100%)';
+    this.el.nativeElement.style.cursor = 'pointer';
     this.el.nativeElement.style.transition = 'filter 0.35s ease-in-out';
   }
-
 }

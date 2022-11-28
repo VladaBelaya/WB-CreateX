@@ -1,9 +1,12 @@
-import {AfterViewInit, Directive, ElementRef, Input} from '@angular/core';
-import {Chart, registerables} from "chart.js";
-import {ChartConfig, ChartMainConfig} from "../../services/charts/charts.service";
+import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core';
+import { Chart, registerables } from 'chart.js';
+import {
+  ChartConfig,
+  ChartMainConfig,
+} from '../../services/charts/charts.service';
 
 @Directive({
-  selector: '[appChart]'
+  selector: '[appChart]',
 })
 export class ChartsDirective implements AfterViewInit {
   @Input() public data!: ChartConfig | ChartMainConfig;
@@ -33,20 +36,20 @@ export class ChartsDirective implements AfterViewInit {
         plugins: {
           title: {
             display: true,
-            text: this.data.name ? this.data.name : 'Склад без корректного адреса',
+            text: this.data.name
+              ? this.data.name
+              : 'Склад без корректного адреса',
             color: '#1E212C',
             font: {
               size: 30,
-
             },
             padding: {
               top: 30,
-              bottom: 20
-            }
-          }
-        }
+              bottom: 20,
+            },
+          },
+        },
       },
     });
   }
-
 }

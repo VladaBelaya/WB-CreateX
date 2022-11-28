@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
-import {MatIconRegistry} from "@angular/material/icon";
-import {DomSanitizer} from "@angular/platform-browser";
+import { Injectable } from '@angular/core';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 interface NameIcons {
   name: string;
-  path: string
+  path: string;
 }
 
 const ICONS: NameIcons[] = [
@@ -39,17 +39,21 @@ const ICONS: NameIcons[] = [
 ];
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class IconService {
-
-  constructor(private readonly iconRegistry: MatIconRegistry, private readonly sanitizer: DomSanitizer) {
-    this.initIcons()
-
+  constructor(
+    private readonly iconRegistry: MatIconRegistry,
+    private readonly sanitizer: DomSanitizer
+  ) {
+    this.initIcons();
   }
 
   addPath(name: string, path: string) {
-    this.iconRegistry.addSvgIcon(name, this.sanitizer.bypassSecurityTrustResourceUrl(path));
+    this.iconRegistry.addSvgIcon(
+      name,
+      this.sanitizer.bypassSecurityTrustResourceUrl(path)
+    );
   }
 
   private initIcons() {

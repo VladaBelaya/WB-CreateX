@@ -1,4 +1,4 @@
-@import 'config';
+@import "config";
 // button
 .btn {
   padding: 13px 40px 14px;
@@ -24,7 +24,7 @@
     top: 50%;
     transform: translateY(-50%);
     right: 12px;
-    background: url('../assets/img/arrow.svg') no-repeat center;
+    background: url("../assets/img/arrow.svg") no-repeat center;
   }
   &_go-to-top {
     width: auto;
@@ -39,7 +39,7 @@
     margin: 24px 24px 0 auto;
     width: 24px;
     height: 24px;
-    background: url('../assets/img/close.svg') no-repeat center;
+    background: url("../assets/img/close.svg") no-repeat center;
   }
   &_password {
     position: absolute;
@@ -49,16 +49,15 @@
     width: 16px;
     height: 16px;
     padding: 0;
-    background: url('../assets/img/password.svg') no-repeat center;
+    background: url("../assets/img/password.svg") no-repeat center;
   }
-
 
   &__auth-icon {
     display: inline-block;
     width: 20px;
     height: 20px;
     margin-right: 8px;
-    background: url('../assets/img/profile.svg') center no-repeat;
+    background: url("../assets/img/profile.svg") center no-repeat;
   }
 
   &_search {
@@ -69,18 +68,18 @@
     width: 16px;
     height: 16px;
     padding: 0;
-    background: url('../assets/img/search.svg') no-repeat center;
+    background: url("../assets/img/search.svg") no-repeat center;
   }
   &_card {
     line-height: 1.9;
     padding: 0 32px 0 0;
-    background: url('../assets/img/arrow_red.svg') no-repeat right;
+    background: url("../assets/img/arrow_red.svg") no-repeat right;
   }
   &_slider {
     padding: 0;
     width: 24px;
     height: 24px;
-    background: url('../assets/img/arrow_black.svg') no-repeat center;
+    background: url("../assets/img/arrow_black.svg") no-repeat center;
     &:not(:last-child) {
       margin-right: 24px;
     }

@@ -1,9 +1,9 @@
 <article *ngFor="let card of cards" class="card">
   <a [href]="card.link" class="link-card">
-    <img class="img" [src]="card.src" alt="фото автора">
+    <img class="img" [src]="card.src" alt="фото автора" />
     <div class="content">
       <app-date [date]="card.date"></app-date>
-      <div class="header">{{card.title}}</div>
+      <div class="header">{{ card.title }}</div>
     </div>
   </a>
 </article>

@@ -1,16 +1,15 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-export type Tag = { title: string; link: string }
+export type Tag = { title: string; link: string };
 
 @Component({
   selector: 'app-tags',
   templateUrl: './tags.component.html',
-  styleUrls: ['./tags.component.scss']
+  styleUrls: ['./tags.component.scss'],
 })
-
 export class TagsComponent {
   @Input() public tags: Tag[] = [
-    {title: 'learning', link: 'learning'},
-    {title: 'HR', link: 'HR'}
-  ]
+    { title: 'learning', link: 'learning' },
+    { title: 'HR', link: 'HR' },
+  ];
 }

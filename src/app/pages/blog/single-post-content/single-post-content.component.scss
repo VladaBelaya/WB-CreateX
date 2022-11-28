@@ -1,4 +1,4 @@
-@import '../../../../styles/variables';
+@import "../../../../styles/variables";
 
 :host {
   flex: 1 1 auto;
@@ -19,10 +19,10 @@
   line-height: 1.6;
   color: $black2;
   font-weight: 400;
-  background: url('../../../../assets/img/files.svg') left no-repeat;
+  background: url("../../../../assets/img/files.svg") left no-repeat;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     right: 0;
     top: 50%;
@@ -63,7 +63,7 @@
 .time-read {
   margin-left: 24px;
   padding-left: 26px;
-  background: url('../../../../assets/img/time.svg') left center no-repeat;
+  background: url("../../../../assets/img/time.svg") left center no-repeat;
 }
 
 .share {
@@ -80,7 +80,7 @@
   margin-bottom: 40px;
   width: 100%;
   height: 360px;
-  background: url('../../../../assets/img/blog.jpg') center no-repeat;
+  background: url("../../../../assets/img/blog.jpg") center no-repeat;
 }
 
 .paragraph {
@@ -93,7 +93,8 @@
   }
 }
 
-.bold, .blockquote {
+.bold,
+.blockquote {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
@@ -105,7 +106,7 @@
   padding: 48px 0;
 
   .icon {
-    background: url('../../../../assets/img/quotes.svg') center no-repeat;
+    background: url("../../../../assets/img/quotes.svg") center no-repeat;
     width: 28px;
     height: 20px;
     flex: 1 0 auto;
@@ -127,19 +128,20 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
       width: 16px;
       height: 16px;
-      background: url('../../../../assets/img/marker.svg') center no-repeat;
+      background: url("../../../../assets/img/marker.svg") center no-repeat;
     }
   }
 }
 
-.tags-content, .tags-share {
+.tags-content,
+.tags-share {
   display: flex;
   align-items: center;
 }
