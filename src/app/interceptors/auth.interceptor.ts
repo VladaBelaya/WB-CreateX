@@ -15,7 +15,13 @@ export class AuthInterceptor implements HttpInterceptor {
     request: HttpRequest<unknown>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
+    const clone = request.clone({
+      setHeaders: {
+        "custom-study-token" : "perfect future is waiting for us",
+        authorization: "Bearer don't forget password "
+      }
+    })
     console.log(request);
-    return next.handle(request);
+    return next.handle(clone);
   }
 }

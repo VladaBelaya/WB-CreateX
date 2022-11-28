@@ -38,6 +38,8 @@ import { ColorfulDirective } from './directives/colorful.directive';
 import { ChartsDirective } from './pages/charts/charts.directive';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { BlogComponent } from './pages/blog/blog.component';
+import { FiltersComponent } from './pages/blog/filters/filters.component';
 
 const mapConfig: YaConfig = {
   apikey: environment.API_YA,
@@ -72,6 +74,8 @@ const mapConfig: YaConfig = {
     ChartComponent,
     ColorfulDirective,
     ChartsDirective,
+    BlogComponent,
+    FiltersComponent,
   ],
   imports: [
     BrowserModule,
