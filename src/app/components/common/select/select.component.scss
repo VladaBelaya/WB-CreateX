@@ -1,0 +1,45 @@
+@import "../../../../styles/variables";
+
+.select-container {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.text {
+  margin-right: 12px;
+  font-weight: 700;
+  font-size: $fs16;
+  line-height: 1.6;
+  color: $black2;
+}
+
+.select {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  min-width: 160px;
+  padding: 10px 16px 11px;
+  border: 1px solid $light_gray;
+  border-radius: 4px;
+  font-family: 'lato', sans-serif;
+  font-size: $fs14;
+  line-height: 1.5;
+  background-color: transparent;
+  appearance:none;
+  outline: none;
+}
+
+.select-block {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    width: 16px;
+    height: 16px;
+    background: url("../../../../assets/img/arrow_select.svg") no-repeat center;
+  }
+}

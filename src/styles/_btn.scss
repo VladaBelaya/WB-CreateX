@@ -71,8 +71,10 @@
     background: url("../assets/img/search.svg") no-repeat center;
   }
   &_card {
-    line-height: 1.9;
+    font-size: $fs16;
+    line-height: 1.8;
     padding: 0 32px 0 0;
+    width: auto;
     background: url("../assets/img/arrow_red.svg") no-repeat right;
   }
   &_slider {

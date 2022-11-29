@@ -1,4 +1,5 @@
 .blog {
+  padding-bottom: 180px;
   &__subheading {
     margin-bottom: 8px;
   }
@@ -10,5 +11,25 @@
   &__subheading,
   &__description {
     text-align: center;
+  }
+}
+
+.cards {
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);;
+  grid-template-rows: 510px;
+  gap: 60px 30px;
+  grid-auto-flow: row;
+
+  &__content {
+    grid-column: span 4;
+  }
+
+  .card__big {
+    grid-column-start: span 7;
+  }
+  .card__little {
+    grid-column-start: span 5;
   }
 }

@@ -1,0 +1,33 @@
+@import "../../../../styles/variables";
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__item {
+    font-weight: 700;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    &.active {
+      .pagination__btn {
+        color: $red;
+      }
+    }
+    &.arrow {
+      width: 24px;
+      height: 24px;
+      background: url("../../../../assets/img/arrow_black.svg") no-repeat right;
+      transform: rotate(180deg);
+    }
+  }
+  &__btn{
+    font-size: $fs16;
+    padding: 0;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: $red;
+    }
+  }
+}

@@ -111,6 +111,7 @@
   position: relative;
 }
 
+//networks
 .link {
   .mat-icon {
     svg {
@@ -131,15 +132,49 @@
   }
 }
 
+//blog
+.tabs__btn {
+  .mat-icon {
+    svg {
+      path {
+        fill: $gray2;
+        transition: fill 0.2s ease-in-out;
+      }
+    }
+  }
+  &:hover {
+    .mat-icon {
+      svg {
+        path {
+          fill: $red;
+        }
+      }
+    }
+  }
+  &.active {
+    .mat-icon {
+      svg {
+        path {
+          fill: $red;
+        }
+      }
+    }
+  }
+}
+
 .cards {
   .date {
     position: relative;
     padding-right: 12px;
     margin-right: 12px;
+  }
+
+  .time-read {
+    position: relative;
     &::after {
       content: "";
       position: absolute;
-      right: 0;
+      left: -12px;
       top: 50%;
       transform: translateY(-50%);
       width: 1px;

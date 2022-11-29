@@ -10,12 +10,12 @@
     <div class="info">
       <div class="type">{{ card.category }}</div>
       <app-date [date]="card.date"></app-date>
-      <div class="time-read">{{ card.readTime }}</div>
+      <ng-container *ngIf="card.readTime">
+        <div class="time-read">{{ card.readTime }}</div>
+      </ng-container>
     </div>
     <div class="header">{{ card.title }}</div>
-    <p class="paragraph">{{ card.description }}</p>
+    <p class="paragraph">{{ (card.description.length > 100)? (card.description | slice:0:100)+'...':(card.description) }}</p>
   </div>
-  <a [href]="card.link" class="btn btn_card">{{
-    card.type === "Podcast" ? "Listen" : "Read"
-  }}</a>
+  <button routerLink="/single-post" class="btn btn_card">{{ card.btn }}</button>
 </mat-card>

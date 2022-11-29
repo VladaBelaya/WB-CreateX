@@ -40,6 +40,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { BlogComponent } from './pages/blog/blog.component';
 import { FiltersComponent } from './pages/blog/filters/filters.component';
+import { TabsComponent } from './components/common/tabs/tabs.component';
+import { SelectComponent } from './components/common/select/select.component';
+import {MatSelectModule} from "@angular/material/select";
+import { PaginationComponent } from './components/common/pagination/pagination.component';
 
 const mapConfig: YaConfig = {
   apikey: environment.API_YA,
@@ -76,6 +80,9 @@ const mapConfig: YaConfig = {
     ChartsDirective,
     BlogComponent,
     FiltersComponent,
+    TabsComponent,
+    SelectComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,
@@ -88,6 +95,7 @@ const mapConfig: YaConfig = {
     MatDialogModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatSelectModule,
   ],
   providers: [
     WINDOW_PROVIDERS,

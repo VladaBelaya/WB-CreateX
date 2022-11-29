@@ -5,10 +5,10 @@ export type BlogCard = {
   type: string;
   title: string;
   description: string;
-  readTime: string;
+  readTime?: string;
   date: string;
   src: string;
-  link: string;
+  btn: string
 };
 
 @Component({

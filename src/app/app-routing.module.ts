@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: MainRoutes.Charts, component: ChartsComponent },
   { path: MainRoutes.Contacts, component: ContactsComponent },
   { path: MainRoutes.Blog, component: BlogComponent },
-  { path: MainRoutes.Single_post, component: SinglePostComponent },
+  { path: MainRoutes.Single_post, component: SinglePostComponent},
   { path: MainRoutes.Not_found, component: NotFoundComponent },
   {
     path: MainRoutes.Default,
@@ -30,7 +30,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

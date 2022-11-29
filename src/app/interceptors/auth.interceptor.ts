@@ -21,7 +21,6 @@ export class AuthInterceptor implements HttpInterceptor {
         authorization: "Bearer don't forget password "
       }
     })
-    console.log(request);
     return next.handle(clone);
   }
 }

@@ -2,5 +2,15 @@
   <h2 class="subheading blog__subheading">Contact info</h2>
   <div class="description blog__description">Get in touch</div>
   <app-filters></app-filters>
+  <div class="cards">
+    <div
+      class="cards__content"
+      [ngClass]="setSize(index)"
+      *ngFor="let card of cards; let index = index"
+    >
+      <app-blog-card [card]="card"> </app-blog-card>
+    </div>
+  </div>
+  <app-pagination></app-pagination>
 </div>
 <app-distribution></app-distribution>

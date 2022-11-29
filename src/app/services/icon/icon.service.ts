@@ -35,6 +35,15 @@ const ICONS: NameIcons[] = [
   {
     name: 'google',
     path: 'assets/img/google_min.svg',
+  },{
+    name: 'article',
+    path: 'assets/img/article_gray.svg',
+  },{
+    name: 'video',
+    path: 'assets/img/video_gray.svg',
+  },{
+    name: 'podcast',
+    path: 'assets/img/podcast_gray.svg',
   },
 ];
 

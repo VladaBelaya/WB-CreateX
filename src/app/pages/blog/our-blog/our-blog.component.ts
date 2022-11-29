@@ -14,10 +14,10 @@ export class OurBlogComponent {
       title: 'What are color profiles and how they work in graphic design',
       description:
         'Aliquam vulputate hendrerit quam sollicitudin urna enim viverra gravida. Consectetur urna arcu eleifend. Consectetur urna arcu eleifend.',
-      readTime: '4 min',
+      // readTime: '4 min',
       date: 'August 4, 2022',
       src: 'assets/img/our-blog-1.png',
-      link: '',
+      btn: 'Listen'
     },
     {
       category: 'Development',
@@ -28,7 +28,7 @@ export class OurBlogComponent {
       readTime: '14 min',
       date: 'August 4, 2022',
       src: 'assets/img/our-blog-2.png',
-      link: '',
+      btn: 'Read'
     },
     {
       category: 'Design',
@@ -39,7 +39,7 @@ export class OurBlogComponent {
       readTime: '4 min',
       date: 'August 1, 2022',
       src: 'assets/img/our-blog-3.png',
-      link: '',
+      btn: 'Read'
     },
   ];
 }
